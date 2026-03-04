@@ -1,0 +1,4 @@
+# LIST_OWN — files shared by this node
+# name|ext|size|date_created|date_modified|ttl
+test2.txt|txt|24|1772568944|1772568944|120
+test.txt|txt|22|1772566830|1772566830|120
