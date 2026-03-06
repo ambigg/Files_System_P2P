@@ -1,11 +1,9 @@
 #ifndef STRUCTURES_H
 #define STRUCTURES_H
-
 #include "protocol.h"
 #include <pthread.h>
 #include <time.h>
 
-/* Un archivo en cualquier lista */
 typedef struct {
   char name[MAX_FILENAME_LEN];
   char ext[16];
@@ -13,20 +11,19 @@ typedef struct {
   time_t date_created;
   time_t date_modified;
   int ttl;
-  char owner_ip[MAX_IP_LEN]; /* "LOCAL" si es propio */
+  char owner_ip[MAX_IP_LEN];
   int is_local;
   time_t last_verified;
 } FileEntry;
 
-/* Un peer conocido en la red */
 typedef struct {
   char ip[MAX_IP_LEN];
   int port;
   int reachable;
   time_t last_seen;
+  int fail_count;
 } PeerNode;
 
-/* Un mensaje ya parseado */
 typedef struct {
   char type[32];
   char sender_ip[MAX_IP_LEN];
@@ -35,18 +32,15 @@ typedef struct {
   int payload_len;
 } Message;
 
-/* Las dos listas + sus mutexes */
 typedef struct {
   FileEntry own_list[MAX_FILES];
   int own_count;
   pthread_mutex_t own_mutex;
-
   FileEntry general_list[MAX_FILES];
   int general_count;
   pthread_mutex_t general_mutex;
 } Directory;
 
-/* Una copia temporal en uso */
 typedef struct {
   char original_name[MAX_FILENAME_LEN];
   char owner_ip[MAX_IP_LEN];
@@ -55,7 +49,6 @@ typedef struct {
   int has_changes;
 } FileLease;
 
-/* Estado global del nodo — una sola instancia en main.c */
 typedef struct {
   char my_ip[MAX_IP_LEN];
   int my_port;
@@ -71,7 +64,5 @@ typedef struct {
   int running;
 } NodeState;
 
-/* La única instancia global — definida en main.c, usada en todo */
 extern NodeState g_node;
-
 #endif

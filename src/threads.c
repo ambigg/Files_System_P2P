@@ -24,9 +24,6 @@ static pthread_t tid_connectivity;
 static pthread_t tid_system;
 static pthread_t tid_discovery;
 
-/* ==========================================================
- * HANDLE CLIENT — all buffers on the heap
- * ========================================================== */
 typedef struct {
   int fd;
   char ip[MAX_IP_LEN];
@@ -89,9 +86,6 @@ cleanup:
   return NULL;
 }
 
-/* ==========================================================
- * UPDATE LISTS — FileEntry on the heap
- * ========================================================== */
 static void update_all_lists(void) {
   LOG_I("CONN", "Updating lists (%d peers)...", g_node.peer_count);
 
@@ -114,8 +108,10 @@ static void update_all_lists(void) {
                             MAX_MSG_LEN);
 
     if (rc != P2P_OK) {
-      if (peer->reachable) {
-        LOG_W("CONN", "Peer %s does not respond", peer->ip);
+      peer->fail_count++;
+      if (peer->fail_count >= 3 && peer->reachable) {
+        LOG_W("CONN", "Peer %s not responding (%dx)", peer->ip,
+              peer->fail_count);
         dir_general_remove_peer(peer->ip);
         peer->reachable = 0;
       }
@@ -123,6 +119,7 @@ static void update_all_lists(void) {
       continue;
     }
 
+    peer->fail_count = 0;
     peer->reachable = 1;
     peer->last_seen = time(NULL);
 
@@ -168,9 +165,6 @@ static void update_all_lists(void) {
   LOG_I("CONN", "Update complete");
 }
 
-/* ==========================================================
- * CONNECTIVITY THREAD
- * ========================================================== */
 void *thread_connectivity(void *arg) {
   (void)arg;
   LOG_I("CONN", "Connectivity thread started");
@@ -200,13 +194,13 @@ void *thread_connectivity(void *arg) {
 
     LOG_N("CONN", "Connection from %s", client_ip);
 
-    /* ── Auto-add peer if unknown ── */
+    /* Auto-add or re-activate peer */
     int known = 0;
     for (int i = 0; i < g_node.peer_count; i++) {
       if (strcmp(g_node.peers[i].ip, client_ip) == 0) {
         known = 1;
-        /* Re-mark as reachable in case it was marked down */
         g_node.peers[i].reachable = 1;
+        g_node.peers[i].fail_count = 0;
         g_node.peers[i].last_seen = time(NULL);
         break;
       }
@@ -216,6 +210,7 @@ void *thread_connectivity(void *arg) {
       strncpy(g_node.peers[g_node.peer_count].ip, client_ip, MAX_IP_LEN - 1);
       g_node.peers[g_node.peer_count].port = P2P_PORT;
       g_node.peers[g_node.peer_count].reachable = 1;
+      g_node.peers[g_node.peer_count].fail_count = 0;
       g_node.peers[g_node.peer_count].last_seen = time(NULL);
       g_node.peer_count++;
       LOG_I("CONN", "Auto-added peer: %s", client_ip);
@@ -242,16 +237,12 @@ void *thread_connectivity(void *arg) {
   return NULL;
 }
 
-/* ==========================================================
- * SYSTEM THREAD — FileSnap curr on the heap
- * ========================================================== */
 typedef struct {
   char name[MAX_FILENAME_LEN];
   time_t mtime;
   long size;
 } FileSnap;
 
-/* prev is static — lives in BSS, not on the stack */
 static FileSnap prev[MAX_FILES];
 static int prev_count = 0;
 
@@ -301,7 +292,6 @@ void *thread_system(void *arg) {
   while (g_node.running) {
     sleep(5);
 
-    /* curr on the heap — not on the thread's stack */
     FileSnap *curr = malloc(MAX_FILES * sizeof(FileSnap));
     if (!curr)
       continue;
@@ -310,7 +300,6 @@ void *thread_system(void *arg) {
     /* New or modified files */
     for (int i = 0; i < curr_count; i++) {
       int idx = snap_find(curr[i].name, prev, prev_count);
-
       if (idx < 0) {
         char path[MAX_PATH_LEN];
         snprintf(path, sizeof(path), "%s/%s", g_node.shared_folder,
@@ -346,15 +335,44 @@ void *thread_system(void *arg) {
     memcpy(prev, curr, curr_count * sizeof(FileSnap));
     prev_count = curr_count;
     free(curr);
+
+    /* Watch peers.conf for manually added peers */
+    static time_t last_peers_mtime = 0;
+    struct stat peers_st;
+    if (stat("config/peers.conf", &peers_st) == 0) {
+      if (peers_st.st_mtime != last_peers_mtime) {
+        last_peers_mtime = peers_st.st_mtime;
+
+        PeerNode new_peers[MAX_PEERS];
+        int new_count =
+            data_load_peers("config/peers.conf", new_peers, MAX_PEERS);
+
+        for (int i = 0; i < new_count; i++) {
+          int known = 0;
+          for (int j = 0; j < g_node.peer_count; j++) {
+            if (strcmp(g_node.peers[j].ip, new_peers[i].ip) == 0 &&
+                g_node.peers[j].port == new_peers[i].port) {
+              known = 1;
+              break;
+            }
+          }
+          if (!known && g_node.peer_count < MAX_PEERS) {
+            g_node.peers[g_node.peer_count] = new_peers[i];
+            g_node.peers[g_node.peer_count].reachable = 0;
+            g_node.peers[g_node.peer_count].fail_count = 0;
+            g_node.peer_count++;
+            LOG_I("SYS", "New peer from peers.conf: %s:%d", new_peers[i].ip,
+                  new_peers[i].port);
+          }
+        }
+      }
+    }
   }
 
   LOG_I("SYS", "System thread terminated");
   return NULL;
 }
 
-/* ==========================================================
- * THREAD MANAGEMENT
- * ========================================================== */
 int threads_start(void) {
   if (pthread_create(&tid_connectivity, NULL, thread_connectivity, NULL) != 0) {
     LOG_E("THREADS", "Could not create connectivity thread");
