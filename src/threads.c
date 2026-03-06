@@ -2,7 +2,6 @@
 #include "../include/communication.h"
 #include "../include/data.h"
 #include "../include/directory.h"
-#include "../include/discovery.h"
 #include "../include/log.h"
 #include "../include/logic.h"
 #include "../include/protocol.h"
@@ -22,70 +21,10 @@
 
 static pthread_t tid_connectivity;
 static pthread_t tid_system;
-static pthread_t tid_discovery;
 
-typedef struct {
-  int fd;
-  char ip[MAX_IP_LEN];
-} ClientConn;
-
-static void *handle_client(void *arg) {
-  ClientConn *conn = (ClientConn *)arg;
-  int fd = conn->fd;
-  char client_ip[MAX_IP_LEN];
-  strncpy(client_ip, conn->ip, MAX_IP_LEN - 1);
-  free(conn);
-
-  char *raw = malloc(MAX_MSG_LEN * 2);
-  char *plain = malloc(MAX_MSG_LEN);
-  char *resp_plain = malloc(MAX_MSG_LEN * 2);
-  char *resp_sec = malloc(MAX_MSG_LEN * 4);
-
-  if (!raw || !plain || !resp_plain || !resp_sec) {
-    LOG_E("CONN", "malloc failed in handle_client");
-    free(raw);
-    free(plain);
-    free(resp_plain);
-    free(resp_sec);
-    comm_close(fd);
-    return NULL;
-  }
-
-  int n = comm_recv(fd, raw, MAX_MSG_LEN * 2);
-  if (n <= 0)
-    goto cleanup;
-
-  int plain_len;
-  if (sec_is_secure(raw)) {
-    if (sec_decrypt(raw, plain, &plain_len) != P2P_OK) {
-      LOG_E("CONN", "Invalid CRC from %s", client_ip);
-      goto cleanup;
-    }
-  } else {
-    strncpy(plain, raw, MAX_MSG_LEN - 1);
-  }
-
-  Message msg;
-  if (transfer_parse_message(plain, &msg) != P2P_OK) {
-    LOG_E("CONN", "Malformed message from %s", client_ip);
-    goto cleanup;
-  }
-
-  logic_handle_request(&msg, client_ip, resp_plain);
-
-  int resp_len = sec_encrypt(resp_plain, strlen(resp_plain), resp_sec);
-  if (resp_len > 0)
-    comm_send_fd(fd, resp_sec, resp_len);
-
-cleanup:
-  free(raw);
-  free(plain);
-  free(resp_plain);
-  free(resp_sec);
-  comm_close(fd);
-  return NULL;
-}
-
+/* ==========================================================
+ * UPDATE LISTS — poll every peer via UDP
+ * ========================================================== */
 static void update_all_lists(void) {
   LOG_I("CONN", "Updating lists (%d peers)...", g_node.peer_count);
 
@@ -104,6 +43,7 @@ static void update_all_lists(void) {
     if (!resp_raw)
       continue;
 
+    /* comm_send_recv: sends from ephemeral port, waits on same socket */
     int rc = comm_send_recv(peer->ip, peer->port, get_list_secure, resp_raw,
                             MAX_MSG_LEN);
 
@@ -165,39 +105,51 @@ static void update_all_lists(void) {
   LOG_I("CONN", "Update complete");
 }
 
+/* ==========================================================
+ * CONNECTIVITY THREAD — UDP server loop
+ * ========================================================== */
 void *thread_connectivity(void *arg) {
   (void)arg;
   LOG_I("CONN", "Connectivity thread started");
 
   int server_fd = comm_start_server(g_node.my_port);
   if (server_fd < 0) {
-    LOG_E("CONN", "Could not start server");
+    LOG_E("CONN", "Could not start UDP server");
     return NULL;
   }
-
-  struct timeval tv = {1, 0};
-  setsockopt(server_fd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
 
   update_all_lists();
   time_t last_update = time(NULL);
 
   while (g_node.running) {
+
+    /* Periodic poll */
     if (time(NULL) - last_update >= UPDATE_INTERVAL) {
       update_all_lists();
       last_update = time(NULL);
     }
 
-    char client_ip[MAX_IP_LEN];
-    int client_fd = comm_accept(server_fd, client_ip);
-    if (client_fd < 0)
+    /* Receive incoming UDP datagram */
+    char *raw = malloc(MAX_MSG_LEN * 2);
+    if (!raw)
       continue;
 
-    LOG_N("CONN", "Connection from %s", client_ip);
+    char sender_ip[MAX_IP_LEN] = {0};
+    int sender_port = 0;
+
+    int n = comm_recv_from(server_fd, raw, MAX_MSG_LEN * 2, sender_ip,
+                           &sender_port);
+    if (n <= 0) {
+      free(raw);
+      continue; /* timeout — loop again */
+    }
+
+    LOG_N("CONN", "Datagram from %s:%d", sender_ip, sender_port);
 
     /* Auto-add or re-activate peer */
     int known = 0;
     for (int i = 0; i < g_node.peer_count; i++) {
-      if (strcmp(g_node.peers[i].ip, client_ip) == 0) {
+      if (strcmp(g_node.peers[i].ip, sender_ip) == 0) {
         known = 1;
         g_node.peers[i].reachable = 1;
         g_node.peers[i].fail_count = 0;
@@ -205,31 +157,64 @@ void *thread_connectivity(void *arg) {
         break;
       }
     }
-    if (!known && strcmp(client_ip, g_node.my_ip) != 0 &&
+    if (!known && strcmp(sender_ip, g_node.my_ip) != 0 &&
         g_node.peer_count < MAX_PEERS) {
-      strncpy(g_node.peers[g_node.peer_count].ip, client_ip, MAX_IP_LEN - 1);
-      g_node.peers[g_node.peer_count].port = P2P_PORT;
+      strncpy(g_node.peers[g_node.peer_count].ip, sender_ip, MAX_IP_LEN - 1);
+      g_node.peers[g_node.peer_count].port = sender_port;
       g_node.peers[g_node.peer_count].reachable = 1;
       g_node.peers[g_node.peer_count].fail_count = 0;
       g_node.peers[g_node.peer_count].last_seen = time(NULL);
       g_node.peer_count++;
-      LOG_I("CONN", "Auto-added peer: %s", client_ip);
+      LOG_I("CONN", "Auto-added peer: %s:%d", sender_ip, sender_port);
     }
 
-    ClientConn *conn = malloc(sizeof(ClientConn));
-    if (!conn) {
-      comm_close(client_fd);
+    /* Decrypt */
+    char *plain = malloc(MAX_MSG_LEN);
+    if (!plain) {
+      free(raw);
       continue;
     }
-    conn->fd = client_fd;
-    strncpy(conn->ip, client_ip, MAX_IP_LEN - 1);
 
-    pthread_t tid;
-    pthread_attr_t attr;
-    pthread_attr_init(&attr);
-    pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
-    pthread_create(&tid, &attr, handle_client, conn);
-    pthread_attr_destroy(&attr);
+    int plain_len;
+    if (sec_is_secure(raw)) {
+      if (sec_decrypt(raw, plain, &plain_len) != P2P_OK) {
+        LOG_E("CONN", "Invalid CRC from %s", sender_ip);
+        free(raw);
+        free(plain);
+        continue;
+      }
+    } else {
+      strncpy(plain, raw, MAX_MSG_LEN - 1);
+    }
+    free(raw);
+
+    /* Parse */
+    Message msg;
+    if (transfer_parse_message(plain, &msg) != P2P_OK) {
+      LOG_E("CONN", "Malformed message from %s", sender_ip);
+      free(plain);
+      continue;
+    }
+    free(plain);
+
+    /* Handle */
+    char *resp_plain = malloc(MAX_MSG_LEN * 2);
+    if (!resp_plain)
+      continue;
+
+    logic_handle_request(&msg, sender_ip, resp_plain);
+
+    /* Respond directly to sender's ephemeral port — KEY FIX */
+    if (strlen(resp_plain) > 0) {
+      char *resp_sec = malloc(MAX_MSG_LEN * 4);
+      if (resp_sec) {
+        int resp_len = sec_encrypt(resp_plain, strlen(resp_plain), resp_sec);
+        if (resp_len > 0)
+          comm_send_to(server_fd, resp_sec, resp_len, sender_ip, sender_port);
+        free(resp_sec);
+      }
+    }
+    free(resp_plain);
   }
 
   comm_close(server_fd);
@@ -237,6 +222,9 @@ void *thread_connectivity(void *arg) {
   return NULL;
 }
 
+/* ==========================================================
+ * SYSTEM THREAD — file watcher + peers.conf watcher
+ * ========================================================== */
 typedef struct {
   char name[MAX_FILENAME_LEN];
   time_t mtime;
@@ -292,12 +280,12 @@ void *thread_system(void *arg) {
   while (g_node.running) {
     sleep(5);
 
+    /* ── Shared folder watcher ── */
     FileSnap *curr = malloc(MAX_FILES * sizeof(FileSnap));
     if (!curr)
       continue;
     int curr_count = take_snapshot(curr, MAX_FILES);
 
-    /* New or modified files */
     for (int i = 0; i < curr_count; i++) {
       int idx = snap_find(curr[i].name, prev, prev_count);
       if (idx < 0) {
@@ -323,7 +311,6 @@ void *thread_system(void *arg) {
       }
     }
 
-    /* Deleted files */
     for (int i = 0; i < prev_count; i++) {
       if (snap_find(prev[i].name, curr, curr_count) < 0) {
         dir_own_remove(prev[i].name);
@@ -336,7 +323,7 @@ void *thread_system(void *arg) {
     prev_count = curr_count;
     free(curr);
 
-    /* Watch peers.conf for manually added peers */
+    /* ── peers.conf watcher ── */
     static time_t last_peers_mtime = 0;
     struct stat peers_st;
     if (stat("config/peers.conf", &peers_st) == 0) {
@@ -373,6 +360,9 @@ void *thread_system(void *arg) {
   return NULL;
 }
 
+/* ==========================================================
+ * THREAD MANAGEMENT — 2 threads
+ * ========================================================== */
 int threads_start(void) {
   if (pthread_create(&tid_connectivity, NULL, thread_connectivity, NULL) != 0) {
     LOG_E("THREADS", "Could not create connectivity thread");
@@ -382,11 +372,7 @@ int threads_start(void) {
     LOG_E("THREADS", "Could not create system thread");
     return P2P_ERR;
   }
-  if (pthread_create(&tid_discovery, NULL, thread_discovery, NULL) != 0) {
-    LOG_E("THREADS", "Could not create discovery thread");
-    return P2P_ERR;
-  }
-  LOG_I("THREADS", "3 threads started");
+  LOG_I("THREADS", "2 threads started");
   return P2P_OK;
 }
 
@@ -398,6 +384,5 @@ void threads_stop(void) {
 void threads_join(void) {
   pthread_join(tid_connectivity, NULL);
   pthread_join(tid_system, NULL);
-  pthread_join(tid_discovery, NULL);
-  LOG_I("THREADS", "3 threads terminated");
+  LOG_I("THREADS", "2 threads terminated");
 }

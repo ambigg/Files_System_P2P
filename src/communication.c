@@ -13,69 +13,56 @@
 #include <unistd.h>
 
 /* ==========================================================
- * INTERNAL HELPER: set read/write timeout on socket
- * to avoid blocking indefinitely.
+ * INTERNAL HELPER: create a UDP socket with timeout
  * ========================================================== */
-static void set_timeout(int fd, int seconds) {
-  struct timeval tv;
-  tv.tv_sec = seconds;
-  tv.tv_usec = 0;
-  setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
-  setsockopt(fd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
-}
-
-/* ==========================================================
- * INTERNAL HELPER: create a TCP socket and connect to ip:port.
- * Returns connected fd, -1 on error.
- * ========================================================== */
-static int connect_to(const char *ip, int port) {
-  int fd = socket(AF_INET, SOCK_STREAM, 0);
+static int make_udp(int timeout_sec) {
+  int fd = socket(AF_INET, SOCK_DGRAM, 0);
   if (fd < 0) {
     LOG_E("COMM", "socket() failed: %s", strerror(errno));
     return -1;
   }
+  if (timeout_sec > 0) {
+    struct timeval tv = {timeout_sec, 0};
+    setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+    setsockopt(fd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
+  }
+  return fd;
+}
 
-  set_timeout(fd, CONN_TIMEOUT);
+/* ==========================================================
+ * SEND + RECEIVE (UDP)
+ * Opens a socket, sends datagram, waits for response on the
+ * SAME socket (so the server replies to our ephemeral port).
+ * ========================================================== */
+int comm_send_recv(const char *ip, int port, const char *message,
+                   char *response, int resp_len) {
+  int fd = make_udp(CONN_TIMEOUT);
+  if (fd < 0)
+    return P2P_ERR;
 
   struct sockaddr_in addr;
   memset(&addr, 0, sizeof(addr));
   addr.sin_family = AF_INET;
   addr.sin_port = htons(port);
-
   if (inet_pton(AF_INET, ip, &addr.sin_addr) <= 0) {
     LOG_E("COMM", "Invalid IP: %s", ip);
     close(fd);
-    return -1;
-  }
-
-  if (connect(fd, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
-    LOG_W("COMM", "connect() to %s:%d failed: %s", ip, port, strerror(errno));
-    close(fd);
-    return -1;
-  }
-
-  return fd;
-}
-
-/* ==========================================================
- * SEND + RECEIVE
- * Most exchanges follow this pattern:
- * I send something → the other replies → I close the connection.
- * ========================================================== */
-int comm_send_recv(const char *ip, int port, const char *message,
-                   char *response, int resp_len) {
-  int fd = connect_to(ip, port);
-  if (fd < 0)
     return P2P_ERR;
+  }
 
   int msg_len = strlen(message);
-  if (send(fd, message, msg_len, 0) != msg_len) {
-    LOG_E("COMM", "incomplete send() to %s:%d", ip, port);
+  if (sendto(fd, message, msg_len, 0, (struct sockaddr *)&addr, sizeof(addr)) <
+      0) {
+    LOG_W("COMM", "sendto() to %s:%d failed: %s", ip, port, strerror(errno));
     close(fd);
     return P2P_ERR;
   }
 
-  int n = comm_recv(fd, response, resp_len);
+  /* Wait for response on the same socket — server replies to our port */
+  struct sockaddr_in sender;
+  socklen_t sender_len = sizeof(sender);
+  int n = recvfrom(fd, response, resp_len - 1, 0, (struct sockaddr *)&sender,
+                   &sender_len);
   close(fd);
 
   if (n <= 0) {
@@ -83,26 +70,32 @@ int comm_send_recv(const char *ip, int port, const char *message,
     return P2P_TIMEOUT;
   }
 
-  LOG_N("COMM", "SEND_RECV %s:%d → %d bytes sent, %d received", ip, port,
-        msg_len, n);
+  response[n] = '\0';
+  LOG_N("COMM", "SEND_RECV %s:%d → %d sent, %d received", ip, port, msg_len, n);
   return P2P_OK;
 }
 
 /* ==========================================================
- * SEND WITHOUT WAITING FOR RESPONSE
- * For broadcasts and one‑way notifications.
+ * SEND WITHOUT RESPONSE (UDP)
  * ========================================================== */
 int comm_send(const char *ip, int port, const char *message) {
-  int fd = connect_to(ip, port);
+  int fd = make_udp(CONN_TIMEOUT);
   if (fd < 0)
     return P2P_ERR;
 
+  struct sockaddr_in addr;
+  memset(&addr, 0, sizeof(addr));
+  addr.sin_family = AF_INET;
+  addr.sin_port = htons(port);
+  inet_pton(AF_INET, ip, &addr.sin_addr);
+
   int msg_len = strlen(message);
-  int sent = send(fd, message, msg_len, 0);
+  int sent =
+      sendto(fd, message, msg_len, 0, (struct sockaddr *)&addr, sizeof(addr));
   close(fd);
 
-  if (sent != msg_len) {
-    LOG_E("COMM", "incomplete send() to %s:%d", ip, port);
+  if (sent < 0) {
+    LOG_E("COMM", "sendto() to %s:%d failed: %s", ip, port, strerror(errno));
     return P2P_ERR;
   }
 
@@ -111,10 +104,10 @@ int comm_send(const char *ip, int port, const char *message) {
 }
 
 /* ==========================================================
- * TCP SERVER
+ * UDP SERVER — bind to port and return fd
  * ========================================================== */
 int comm_start_server(int port) {
-  int fd = socket(AF_INET, SOCK_STREAM, 0);
+  int fd = socket(AF_INET, SOCK_DGRAM, 0);
   if (fd < 0) {
     LOG_E("COMM", "server socket() failed: %s", strerror(errno));
     return -1;
@@ -135,69 +128,66 @@ int comm_start_server(int port) {
     return -1;
   }
 
-  if (listen(fd, 16) < 0) {
-    LOG_E("COMM", "listen() failed: %s", strerror(errno));
-    close(fd);
-    return -1;
-  }
+  /* 1 second timeout so thread can check g_node.running */
+  struct timeval tv = {1, 0};
+  setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
 
-  LOG_I("COMM", "TCP server listening on port %d", port);
+  LOG_I("COMM", "UDP server listening on port %d", port);
   return fd;
 }
 
 /* ==========================================================
- * ACCEPT INCOMING CONNECTION
+ * RECEIVE DATAGRAM — returns bytes read, fills ip AND port
  * ========================================================== */
-int comm_accept(int server_fd, char *client_ip) {
-  struct sockaddr_in caddr;
-  socklen_t clen = sizeof(caddr);
+int comm_recv_from(int fd, char *buffer, int max_len, char *sender_ip,
+                   int *sender_port) {
+  struct sockaddr_in sender;
+  socklen_t sender_len = sizeof(sender);
 
-  int fd = accept(server_fd, (struct sockaddr *)&caddr, &clen);
-  if (fd < 0)
-    return -1;
+  int n = recvfrom(fd, buffer, max_len - 1, 0, (struct sockaddr *)&sender,
+                   &sender_len);
+  if (n <= 0)
+    return n;
 
-  if (client_ip)
-    inet_ntop(AF_INET, &caddr.sin_addr, client_ip, MAX_IP_LEN);
+  buffer[n] = '\0';
+  if (sender_ip)
+    inet_ntop(AF_INET, &sender.sin_addr, sender_ip, MAX_IP_LEN);
+  if (sender_port)
+    *sender_port = ntohs(sender.sin_port);
 
-  set_timeout(fd, CONN_TIMEOUT);
-  return fd;
+  return n;
 }
 
 /* ==========================================================
- * RECEIVE COMPLETE MESSAGE
- * Reads byte by byte until '\n' is found.
- * This way the message length can be variable.
+ * SEND RESPONSE using existing server fd back to sender
+ * This is the KEY fix: reply to the exact port the request
+ * came from (the client's ephemeral port), not P2P_PORT.
  * ========================================================== */
-int comm_recv(int fd, char *buffer, int max_len) {
-  int total = 0;
-  while (total < max_len - 1) {
-    int n = recv(fd, buffer + total, 1, 0);
-    if (n <= 0)
-      break;
-    total++;
-    if (buffer[total - 1] == '\n')
-      break;
-  }
-  buffer[total] = '\0';
-  return total;
-}
+int comm_send_to(int fd, const char *data, int len, const char *ip, int port) {
+  struct sockaddr_in addr;
+  memset(&addr, 0, sizeof(addr));
+  addr.sin_family = AF_INET;
+  addr.sin_port = htons(port);
+  inet_pton(AF_INET, ip, &addr.sin_addr);
 
-/* ==========================================================
- * SEND USING AN OPEN FILE DESCRIPTOR
- * For when we already have the accepted client fd.
- * ========================================================== */
-int comm_send_fd(int fd, const char *data, int len) {
-  int sent = send(fd, data, len, 0);
-  if (sent != len) {
-    LOG_E("COMM", "comm_send_fd: sent %d of %d bytes", sent, len);
+  int sent = sendto(fd, data, len, 0, (struct sockaddr *)&addr, sizeof(addr));
+  if (sent < 0) {
+    LOG_E("COMM", "comm_send_to %s:%d failed: %s", ip, port, strerror(errno));
     return P2P_ERR;
   }
   return P2P_OK;
 }
 
 /* ==========================================================
- * CLOSE FILE DESCRIPTOR
+ * KEPT FOR COMPATIBILITY — no-op in UDP mode
  * ========================================================== */
+int comm_send_fd(int fd, const char *data, int len) {
+  (void)fd;
+  (void)data;
+  (void)len;
+  return P2P_OK;
+}
+
 void comm_close(int fd) {
   if (fd >= 0)
     close(fd);
@@ -211,30 +201,21 @@ int comm_broadcast(const char *message) {
   for (int i = 0; i < g_node.peer_count; i++) {
     if (!g_node.peers[i].reachable)
       continue;
-
-    if (comm_send(g_node.peers[i].ip, g_node.peers[i].port, message) ==
-        P2P_OK) {
+    if (comm_send(g_node.peers[i].ip, g_node.peers[i].port, message) == P2P_OK)
       sent_count++;
-    }
   }
   LOG_N("COMM", "BROADCAST: %d/%d peers reached", sent_count,
         g_node.peer_count);
   return sent_count;
 }
-// AAGG
-// 202127378
 
 /* ==========================================================
- * PING — check if a peer is alive
- * Simply tries to connect and closes immediately.
+ * PING
  * ========================================================== */
 int comm_ping(const char *ip, int port) {
-  int fd = socket(AF_INET, SOCK_STREAM, 0);
+  int fd = make_udp(2);
   if (fd < 0)
     return 0;
-
-  struct timeval tv = {2, 0};
-  setsockopt(fd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
 
   struct sockaddr_in addr;
   memset(&addr, 0, sizeof(addr));
@@ -242,7 +223,14 @@ int comm_ping(const char *ip, int port) {
   addr.sin_port = htons(port);
   inet_pton(AF_INET, ip, &addr.sin_addr);
 
-  int alive = (connect(fd, (struct sockaddr *)&addr, sizeof(addr)) == 0);
+  const char *probe = "PING\n";
+  sendto(fd, probe, strlen(probe), 0, (struct sockaddr *)&addr, sizeof(addr));
+
+  char buf[16];
+  struct sockaddr_in sender;
+  socklen_t slen = sizeof(sender);
+  int alive = (recvfrom(fd, buf, sizeof(buf) - 1, 0, (struct sockaddr *)&sender,
+                        &slen) > 0);
   close(fd);
 
   LOG_N("COMM", "PING %s:%d → %s", ip, port, alive ? "online" : "offline");

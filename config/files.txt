@@ -1,4 +1,5 @@
 # LIST_OWN — files shared by this node
 # name|ext|size|date_created|date_modified|ttl
 fox copy.png|png|2006|1772832194|1753129891|120
+X.txt|txt|0|1772836785|1772836785|120
 A.txt|txt|0|1772834234|1772834234|120
