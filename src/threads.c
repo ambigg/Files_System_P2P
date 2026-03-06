@@ -200,6 +200,27 @@ void *thread_connectivity(void *arg) {
 
     LOG_N("CONN", "Connection from %s", client_ip);
 
+    /* ── Auto-add peer if unknown ── */
+    int known = 0;
+    for (int i = 0; i < g_node.peer_count; i++) {
+      if (strcmp(g_node.peers[i].ip, client_ip) == 0) {
+        known = 1;
+        /* Re-mark as reachable in case it was marked down */
+        g_node.peers[i].reachable = 1;
+        g_node.peers[i].last_seen = time(NULL);
+        break;
+      }
+    }
+    if (!known && strcmp(client_ip, g_node.my_ip) != 0 &&
+        g_node.peer_count < MAX_PEERS) {
+      strncpy(g_node.peers[g_node.peer_count].ip, client_ip, MAX_IP_LEN - 1);
+      g_node.peers[g_node.peer_count].port = P2P_PORT;
+      g_node.peers[g_node.peer_count].reachable = 1;
+      g_node.peers[g_node.peer_count].last_seen = time(NULL);
+      g_node.peer_count++;
+      LOG_I("CONN", "Auto-added peer: %s", client_ip);
+    }
+
     ClientConn *conn = malloc(sizeof(ClientConn));
     if (!conn) {
       comm_close(client_fd);
