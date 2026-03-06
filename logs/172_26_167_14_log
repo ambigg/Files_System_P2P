@@ -1,354 +1,384 @@
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 12:52:33] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 12:52:33] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 0
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 12:52:33] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 12:52:35] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 12:52:35] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 12:52:35] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 12:52:35] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 12:52:35] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 12:52:35] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 12:54:23] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 12:54:23] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 0
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 12:54:23] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 12:54:25] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 12:54:25] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 12:54:25] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 12:54:25] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 12:54:25] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 12:54:25] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 13:01:22] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:01:22] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 0
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 13:01:22] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 13:01:24] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 13:01:24] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 13:01:24] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 13:01:24] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 13:01:24] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:01:24] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 13:02:17] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:02:17] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 0
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 13:02:17] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 13:02:19] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 13:02:19] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 13:02:19] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 13:02:19] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 13:02:19] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 13:02:19] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 13:02:22] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:02:22] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 0
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 13:02:22] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 13:02:24] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 13:02:24] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 13:02:24] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 13:02:24] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 13:02:24] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 13:02:24] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 13:07:35] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:07:35] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 0
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 13:07:35] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 13:07:37] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 13:07:37] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 13:07:37] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 13:07:37] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 13:07:37] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 13:07:37] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:07:37] [INFO ] [172.26.167.14  ] [CONN        ] Actualizando listas (2 peers)...
-[2026-03-03 13:07:37] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
-[2026-03-03 13:07:37] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=12626c41)
-[2026-03-03 13:07:55] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:07:55] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:08:03] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:08:03] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:08:05] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:08:05] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:08:05] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:08:05] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:08:10] [INFO ] [172.26.167.14  ] [MAIN        ] Iniciando apagado...
-[2026-03-03 13:08:10] [INFO ] [172.26.167.14  ] [THREADS     ] Señal de parada enviada
-[2026-03-03 13:08:10] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento terminado
-[2026-03-03 13:08:12] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema terminado
-[2026-03-03 13:08:52] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.11:8080 falló: Operation timed out
-[2026-03-03 13:10:07] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.12:8080 falló: Operation timed out
-[2026-03-03 13:10:07] [INFO ] [172.26.167.14  ] [CONN        ] Actualización completa
-[2026-03-03 13:10:07] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad terminado
-[2026-03-03 13:10:07] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos terminaron
-[2026-03-03 13:10:07] [INFO ] [172.26.167.14  ] [MAIN        ] NODO TERMINADO
-[2026-03-03 13:10:07] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 13:11:08] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:11:08] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 0
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 13:11:08] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 13:11:10] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 13:11:10] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 13:11:10] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 13:11:10] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 13:11:10] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 13:11:10] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:11:10] [INFO ] [172.26.167.14  ] [CONN        ] Actualizando listas (2 peers)...
-[2026-03-03 13:11:10] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
-[2026-03-03 13:11:10] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=39466a50)
-[2026-03-03 13:11:12] [INFO ] [172.26.167.14  ] [MAIN        ] Iniciando apagado...
-[2026-03-03 13:11:12] [INFO ] [172.26.167.14  ] [THREADS     ] Señal de parada enviada
-[2026-03-03 13:11:13] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento terminado
-[2026-03-03 13:11:15] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema terminado
-[2026-03-03 13:12:25] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.11:8080 falló: Operation timed out
-[2026-03-03 13:13:40] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.12:8080 falló: Operation timed out
-[2026-03-03 13:13:40] [INFO ] [172.26.167.14  ] [CONN        ] Actualización completa
-[2026-03-03 13:13:40] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad terminado
-[2026-03-03 13:13:40] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos terminaron
-[2026-03-03 13:13:40] [INFO ] [172.26.167.14  ] [MAIN        ] NODO TERMINADO
-[2026-03-03 13:13:40] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 13:14:57] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 0 archivos en shared
-[2026-03-03 13:14:57] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (0 archivos)
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 0
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 13:14:57] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 13:14:59] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 13:14:59] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 13:14:59] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 13:14:59] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 13:14:59] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 13:14:59] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:14:59] [INFO ] [172.26.167.14  ] [CONN        ] Actualizando listas (2 peers)...
-[2026-03-03 13:14:59] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
-[2026-03-03 13:14:59] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=adfa9ffe)
-[2026-03-03 13:15:34] [DIR  ] [172.26.167.14  ] [DIR         ] OWN agregado: prueba.txt
-[2026-03-03 13:15:34] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (1 archivos)
-[2026-03-03 13:15:34] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD NEW_FILE → prueba.txt
-[2026-03-03 13:15:34] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 78 bytes → 179 bytes (IV=c60b00a4)
-[2026-03-03 13:15:34] [NET  ] [172.26.167.14  ] [COMM        ] BROADCAST: 0/2 peers alcanzados
-[2026-03-03 13:15:34] [DIR  ] [172.26.167.14  ] [DIR         ] Anunciado prueba.txt a 0 peers
-[2026-03-03 13:15:34] [FILE ] [172.26.167.14  ] [SYS         ] Archivo nuevo: prueba.txt
-[2026-03-03 13:15:54] [INFO ] [172.26.167.14  ] [UI          ] Directorio consultado: 1 archivos
-[2026-03-03 13:16:14] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.11:8080 falló: Operation timed out
-[2026-03-03 13:17:13] [INFO ] [172.26.167.14  ] [MAIN        ] Iniciando apagado...
-[2026-03-03 13:17:13] [INFO ] [172.26.167.14  ] [THREADS     ] Señal de parada enviada
-[2026-03-03 13:17:14] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema terminado
-[2026-03-03 13:17:14] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento terminado
-[2026-03-03 13:17:29] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.12:8080 falló: Operation timed out
-[2026-03-03 13:17:29] [INFO ] [172.26.167.14  ] [CONN        ] Actualización completa
-[2026-03-03 13:17:29] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad terminado
-[2026-03-03 13:17:29] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos terminaron
-[2026-03-03 13:17:29] [INFO ] [172.26.167.14  ] [MAIN        ] NODO TERMINADO
-[2026-03-03 13:17:29] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 13:17:35] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 1 archivos en shared
-[2026-03-03 13:17:35] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (1 archivos)
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 1
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 13:17:35] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 13:17:37] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 13:17:37] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 13:17:37] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 13:17:37] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 13:17:37] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 13:17:37] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:17:37] [INFO ] [172.26.167.14  ] [CONN        ] Actualizando listas (2 peers)...
-[2026-03-03 13:17:37] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
-[2026-03-03 13:17:37] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=97658f25)
-[2026-03-03 13:17:43] [INFO ] [172.26.167.14  ] [MAIN        ] Iniciando apagado...
-[2026-03-03 13:17:43] [INFO ] [172.26.167.14  ] [THREADS     ] Señal de parada enviada
-[2026-03-03 13:17:44] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento terminado
-[2026-03-03 13:17:47] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema terminado
-[2026-03-03 13:18:52] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.11:8080 falló: Operation timed out
-[2026-03-03 13:20:07] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.12:8080 falló: Operation timed out
-[2026-03-03 13:20:07] [INFO ] [172.26.167.14  ] [CONN        ] Actualización completa
-[2026-03-03 13:20:07] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad terminado
-[2026-03-03 13:20:07] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos terminaron
-[2026-03-03 13:20:07] [INFO ] [172.26.167.14  ] [MAIN        ] NODO TERMINADO
-[2026-03-03 13:20:07] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [MAIN        ] NODO INICIADO
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [MAIN        ] Puerto: 8080
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [DIR         ] Directorio inicializado
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [DATA        ] Cargados 2 peers desde config/peers.conf
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers cargados
-[2026-03-03 13:38:36] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 1 archivos en shared
-[2026-03-03 13:38:36] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (1 archivos)
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [MAIN        ] Archivos propios: 1
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [DISC        ] Buscando peers en la red local...
-[2026-03-03 13:38:36] [INFO ] [172.26.167.14  ] [DISC        ] HELLO enviado a broadcast
-[2026-03-03 13:38:38] [INFO ] [172.26.167.14  ] [DISC        ] Búsqueda completada: 2 peers encontrados
-[2026-03-03 13:38:38] [INFO ] [172.26.167.14  ] [CONN        ] Hilo de conectividad iniciado
-[2026-03-03 13:38:38] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema iniciado
-[2026-03-03 13:38:38] [INFO ] [172.26.167.14  ] [THREADS     ] 3 hilos iniciados
-[2026-03-03 13:38:38] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento iniciado (UDP:8081)
-[2026-03-03 13:38:38] [INFO ] [172.26.167.14  ] [COMM        ] Servidor TCP escuchando en puerto 8080
-[2026-03-03 13:38:38] [INFO ] [172.26.167.14  ] [CONN        ] Actualizando listas (2 peers)...
-[2026-03-03 13:38:38] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
-[2026-03-03 13:38:38] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=ee97cee6)
-[2026-03-03 13:38:40] [INFO ] [172.26.167.14  ] [UI          ] Directory queried: 1 files
-[2026-03-03 13:38:49] [INFO ] [172.26.167.14  ] [LOGIC       ] Buscando info: prueba.txt
-[2026-03-03 13:38:49] [DIR  ] [172.26.167.14  ] [DIR         ] FIND prueba.txt → LOCAL (autoritativo)
-[2026-03-03 13:38:49] [DIR  ] [172.26.167.14  ] [LOGIC       ] prueba.txt encontrado local
-[2026-03-03 13:38:49] [INFO ] [172.26.167.14  ] [UI          ] Info queried: prueba.txt
-[2026-03-03 13:39:10] [INFO ] [172.26.167.14  ] [LOGIC       ] Abriendo: prueba.txt
-[2026-03-03 13:39:10] [FILE ] [172.26.167.14  ] [LOGIC       ] Archivo local: shared/prueba.txt
-[2026-03-03 13:39:13] [FILE ] [172.26.167.14  ] [LOGIC       ] Cierre de archivo local: shared/prueba.txt
-[2026-03-03 13:39:13] [INFO ] [172.26.167.14  ] [UI          ] File opened/closed: prueba.txt
-[2026-03-03 13:39:20] [INFO ] [172.26.167.14  ] [LOGIC       ] Abriendo: prueba.txt
-[2026-03-03 13:39:20] [FILE ] [172.26.167.14  ] [LOGIC       ] Archivo local: shared/prueba.txt
-[2026-03-03 13:39:25] [FILE ] [172.26.167.14  ] [LOGIC       ] Cierre de archivo local: shared/prueba.txt
-[2026-03-03 13:39:25] [INFO ] [172.26.167.14  ] [UI          ] File opened/closed: prueba.txt
-[2026-03-03 13:39:46] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 1 archivos en shared
-[2026-03-03 13:39:46] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (1 archivos)
-[2026-03-03 13:39:53] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.11:8080 falló: Operation timed out
-[2026-03-03 13:40:28] [DIR  ] [172.26.167.14  ] [DIR         ] OWN agregado: test.txt
-[2026-03-03 13:40:28] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (2 archivos)
-[2026-03-03 13:40:28] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD NEW_FILE → test.txt
-[2026-03-03 13:40:28] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 75 bytes → 173 bytes (IV=d4b30f17)
-[2026-03-03 13:40:28] [NET  ] [172.26.167.14  ] [COMM        ] BROADCAST: 0/2 peers alcanzados
-[2026-03-03 13:40:28] [DIR  ] [172.26.167.14  ] [DIR         ] Anunciado test.txt a 0 peers
-[2026-03-03 13:40:28] [FILE ] [172.26.167.14  ] [SYS         ] Archivo nuevo: test.txt
-[2026-03-03 13:40:32] [DIR  ] [172.26.167.14  ] [DIR         ] Scan propio: 2 archivos en shared
-[2026-03-03 13:40:32] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (2 archivos)
-[2026-03-03 13:40:33] [DIR  ] [172.26.167.14  ] [DIR         ] OWN actualizado: test.txt
-[2026-03-03 13:40:33] [FILE ] [172.26.167.14  ] [DATA        ] LISTA_OWN guardada en config/files.txt (2 archivos)
-[2026-03-03 13:40:33] [FILE ] [172.26.167.14  ] [SYS         ] Archivo modificado: test.txt
-[2026-03-03 13:40:37] [INFO ] [172.26.167.14  ] [UI          ] Directory queried: 2 files
-[2026-03-03 13:41:08] [WARN ] [172.26.167.14  ] [COMM        ] connect() a 192.168.1.12:8080 falló: Operation timed out
-[2026-03-03 13:41:08] [INFO ] [172.26.167.14  ] [CONN        ] Actualización completa
-[2026-03-03 13:43:21] [INFO ] [172.26.167.14  ] [MAIN        ] Iniciando apagado...
-[2026-03-03 13:43:21] [INFO ] [172.26.167.14  ] [THREADS     ] Señal de parada enviada
-[2026-03-03 13:43:22] [INFO ] [172.26.167.14  ] [DISC        ] Hilo de descubrimiento terminado
-[2026-03-03 13:43:23] [INFO ] [172.26.167.14  ] [SYS         ] Hilo de sistema terminado
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
-[2026-03-03 14:09:23] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
-[2026-03-03 14:09:23] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
-[2026-03-03 14:09:23] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
-[2026-03-03 14:09:25] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 2 peers found
-[2026-03-03 14:09:25] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
-[2026-03-03 14:09:25] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
-[2026-03-03 14:09:25] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
-[2026-03-03 14:09:25] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
-[2026-03-03 14:09:25] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
-[2026-03-03 14:09:25] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (2 peers)...
-[2026-03-03 14:09:25] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
-[2026-03-03 14:09:25] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=7859c5ff)
-[2026-03-03 14:09:28] [INFO ] [172.26.167.14  ] [UI          ] Directory queried: 2 files
-[2026-03-03 14:09:37] [INFO ] [172.26.167.14  ] [LOGIC       ] Looking for info: test.txt
-[2026-03-03 14:09:37] [DIR  ] [172.26.167.14  ] [DIR         ] FIND test.txt → LOCAL (authoritative)
-[2026-03-03 14:09:37] [DIR  ] [172.26.167.14  ] [LOGIC       ] test.txt found locally
-[2026-03-03 14:09:37] [INFO ] [172.26.167.14  ] [UI          ] Info queried: test.txt
-[2026-03-03 14:09:47] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
-[2026-03-03 14:09:47] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
-[2026-03-03 14:09:48] [INFO ] [172.26.167.14  ] [UI          ] Directory queried: 2 files
-[2026-03-03 14:09:51] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
-[2026-03-03 14:09:53] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
-[2026-03-03 14:09:53] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
-[2026-03-03 14:09:55] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
-[2026-03-03 19:44:35] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
-[2026-03-03 19:44:35] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
-[2026-03-03 19:44:35] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
-[2026-03-03 19:44:37] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 2 peers found
-[2026-03-03 19:44:37] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
-[2026-03-03 19:44:37] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
-[2026-03-03 19:44:37] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
-[2026-03-03 19:44:37] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
-[2026-03-03 19:44:37] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
-[2026-03-03 19:44:37] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (2 peers)...
-[2026-03-03 19:44:37] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
-[2026-03-03 19:44:37] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=c641ca06)
-[2026-03-03 19:45:52] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 192.168.1.11:8080 failed: Operation timed out
-[2026-03-03 19:46:24] [INFO ] [172.26.167.14  ] [UI          ] Directory queried: 2 files
-[2026-03-03 19:47:07] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 192.168.1.12:8080 failed: Operation timed out
-[2026-03-03 19:47:07] [INFO ] [172.26.167.14  ] [CONN        ] Update complete
-[2026-03-03 19:47:30] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
-[2026-03-03 19:47:30] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
-[2026-03-03 19:48:18] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
-[2026-03-03 19:48:18] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
-[2026-03-03 19:48:19] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
-[2026-03-03 19:48:22] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
+[2026-03-04 13:09:01] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 13:09:01] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 13:09:01] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 13:09:03] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 2 peers found
+[2026-03-04 13:09:03] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 13:09:03] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 13:09:03] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 13:09:03] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 13:09:03] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 13:09:03] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (2 peers)...
+[2026-03-04 13:09:03] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 13:09:03] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=bb46e20b)
+[2026-03-04 13:10:18] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 192.168.1.11:8080 failed: Operation timed out
+[2026-03-04 13:10:54] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 13:10:54] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 13:10:54] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 13:10:58] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 13:11:33] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 192.168.1.12:8080 failed: Operation timed out
+[2026-03-04 13:11:33] [INFO ] [172.26.167.14  ] [CONN        ] Update complete
+[2026-03-04 13:11:33] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread terminated
+[2026-03-04 13:11:33] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads terminated
+[2026-03-04 13:11:33] [INFO ] [172.26.167.14  ] [MAIN        ] NODE TERMINATED
+[2026-03-04 13:11:33] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
+[2026-03-04 14:46:41] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 14:46:41] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 14:46:41] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 2 peers found
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (2 peers)...
+[2026-03-04 14:46:43] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 14:46:43] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=8e128410)
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 14:46:43] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
+[2026-03-04 14:47:53] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 14:47:53] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 14:47:53] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 14:47:55] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 2 peers found
+[2026-03-04 14:47:55] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 14:47:55] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 14:47:55] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 14:47:55] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 14:47:55] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (2 peers)...
+[2026-03-04 14:47:55] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 14:47:55] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 14:47:55] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=b7239351)
+[2026-03-04 14:48:01] [INFO ] [172.26.167.14  ] [UI          ] Directory queried: 2 files
+[2026-03-04 14:48:04] [INFO ] [172.26.167.14  ] [LOGIC       ] Looking for info: a
+[2026-03-04 14:48:04] [DIR  ] [172.26.167.14  ] [DIR         ] FIND a → not found
+[2026-03-04 14:48:04] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_INFO → a
+[2026-03-04 14:48:04] [WARN ] [172.26.167.14  ] [LOGIC       ] a not found in the network
+[2026-03-04 14:48:14] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 14:48:14] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
+[2026-03-04 15:39:10] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 15:39:10] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 15:39:10] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 15:39:12] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 2 peers found
+[2026-03-04 15:39:12] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 15:39:12] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 15:39:12] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 15:39:12] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 15:39:12] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 15:39:12] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (2 peers)...
+[2026-03-04 15:39:12] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 15:39:12] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=ac8a4667)
+[2026-03-04 15:40:27] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 192.168.1.11:8080 failed: Operation timed out
+[2026-03-04 15:41:41] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 15:41:41] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 15:41:41] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 15:41:42] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 192.168.1.12:8080 failed: Operation timed out
+[2026-03-04 15:41:42] [INFO ] [172.26.167.14  ] [CONN        ] Update complete
+[2026-03-04 15:41:42] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread terminated
+[2026-03-04 15:41:42] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 15:41:42] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads terminated
+[2026-03-04 15:41:42] [INFO ] [172.26.167.14  ] [MAIN        ] NODE TERMINATED
+[2026-03-04 15:41:42] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
+[2026-03-04 15:41:45] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 15:41:45] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 15:41:45] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 15:41:47] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 2 peers found
+[2026-03-04 15:41:47] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 15:41:47] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 15:41:47] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 15:41:47] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 15:41:47] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 15:41:47] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (2 peers)...
+[2026-03-04 15:41:47] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 15:41:47] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=984b80d3)
+[2026-03-04 15:42:00] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 15:42:00] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 15:42:01] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 15:42:02] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 0 peers from config/peers.conf
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [MAIN        ] No peers.conf, using auto‑discovery only
+[2026-03-04 15:43:19] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 15:43:19] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 15:43:19] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 15:43:21] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 0 peers found
+[2026-03-04 15:43:21] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 15:43:21] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 15:43:21] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 15:43:21] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 15:43:21] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 15:43:21] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (0 peers)...
+[2026-03-04 15:43:21] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 15:43:21] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=5423d590)
+[2026-03-04 15:43:21] [INFO ] [172.26.167.14  ] [CONN        ] Update complete
+[2026-03-04 15:45:41] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 15:45:41] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 15:45:41] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 15:45:41] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-04 15:46:46] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 15:46:46] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 15:46:46] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 15:46:48] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 1 peers found
+[2026-03-04 15:46:48] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 15:46:48] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 15:46:48] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 15:46:48] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 15:46:48] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 15:46:48] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-04 15:46:48] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 15:46:48] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=608aae8d)
+[2026-03-04 15:48:03] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 192.168.5.15:8080 failed: Operation timed out
+[2026-03-04 15:48:03] [INFO ] [172.26.167.14  ] [CONN        ] Update complete
+[2026-03-04 15:50:19] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 15:50:19] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 15:50:20] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 15:50:23] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-04 15:55:58] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 15:55:58] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 15:55:58] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 15:56:00] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 1 peers found
+[2026-03-04 15:56:00] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 15:56:00] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 15:56:00] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 15:56:00] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 15:56:00] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 15:56:00] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-04 15:56:00] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 15:56:00] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=decebaf1)
+[2026-03-04 15:56:14] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 15:56:15] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 15:56:16] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 15:56:16] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-04 15:58:39] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 15:58:39] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 15:58:39] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 15:58:41] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 1 peers found
+[2026-03-04 15:58:41] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 15:58:41] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 15:58:41] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 15:58:41] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 15:58:41] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 15:58:41] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-04 15:58:41] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 15:58:41] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=841d52a5)
+[2026-03-04 15:59:18] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 15:59:18] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 15:59:22] [INFO ] [172.26.167.14  ] [UI          ] Directory queried: 2 files
+[2026-03-04 15:59:56] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 172.23.88.139:8080 failed: Operation timed out
+[2026-03-04 15:59:56] [INFO ] [172.26.167.14  ] [CONN        ] Update complete
+[2026-03-04 16:00:06] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 16:00:06] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 16:00:07] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 16:00:07] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-04 16:08:33] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 16:08:33] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 16:08:33] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 1 peers found
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-04 16:08:35] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 16:08:35] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=6e9480c8)
+[2026-03-04 16:08:35] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 16:08:36] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-04 16:08:56] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 16:08:56] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 16:08:56] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 16:08:58] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 1 peers found
+[2026-03-04 16:08:58] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 16:08:58] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 16:08:58] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 16:08:58] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 16:08:58] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 16:08:58] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-04 16:08:58] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 16:08:58] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=d3128dbf)
+[2026-03-04 16:10:13] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 172.23.88.139:8080 failed: Operation timed out
+[2026-03-04 16:10:13] [INFO ] [172.26.167.14  ] [CONN        ] Update complete
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-04 16:24:32] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 16:24:32] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 16:24:32] [WARN ] [172.26.167.14  ] [DISC        ] bind() failed in announce, the thread might already be active
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 16:24:32] [ERROR] [172.26.167.14  ] [COMM        ] bind() port 8080 failed: Address already in use
+[2026-03-04 16:24:32] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 16:24:32] [ERROR] [172.26.167.14  ] [CONN        ] Could not start server
+[2026-03-04 16:24:32] [ERROR] [172.26.167.14  ] [DISC        ] thread bind() failed on port 8081
+[2026-03-04 16:24:42] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 16:26:12] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 16:26:12] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 16:26:12] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads terminated
+[2026-03-04 16:26:12] [INFO ] [172.26.167.14  ] [MAIN        ] NODE TERMINATED
+[2026-03-04 16:26:12] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
+[2026-03-04 16:27:01] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 16:27:01] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 16:27:01] [WARN ] [172.26.167.14  ] [DISC        ] bind() failed in announce, the thread might already be active
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 16:27:01] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 16:27:01] [ERROR] [172.26.167.14  ] [COMM        ] bind() port 8080 failed: Address already in use
+[2026-03-04 16:27:01] [ERROR] [172.26.167.14  ] [DISC        ] thread bind() failed on port 8081
+[2026-03-04 16:27:01] [ERROR] [172.26.167.14  ] [CONN        ] Could not start server
+[2026-03-04 16:29:21] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 16:29:21] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 16:29:22] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 16:29:24] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 16:30:42] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 16:30:42] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 16:30:46] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 16:30:46] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads terminated
+[2026-03-04 16:30:46] [INFO ] [172.26.167.14  ] [MAIN        ] NODE TERMINATED
+[2026-03-04 16:30:46] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [MAIN        ] NODE STARTED
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [MAIN        ] IP:     172.26.167.14
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [MAIN        ] Port:   8080
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [DIR         ] Directory initialized
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [DATA        ] Loaded 2 peers from config/peers.conf
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [MAIN        ] peers.conf: 2 peers loaded
+[2026-03-04 16:46:31] [DIR  ] [172.26.167.14  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-04 16:46:31] [FILE ] [172.26.167.14  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [MAIN        ] Own files: 2
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [DISC        ] Looking for peers on the local network...
+[2026-03-04 16:46:31] [INFO ] [172.26.167.14  ] [DISC        ] HELLO sent to broadcast
+[2026-03-04 16:46:33] [INFO ] [172.26.167.14  ] [DISC        ] Discovery complete: 2 peers found
+[2026-03-04 16:46:33] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread started
+[2026-03-04 16:46:33] [INFO ] [172.26.167.14  ] [SYS         ] System thread started
+[2026-03-04 16:46:33] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads started
+[2026-03-04 16:46:33] [INFO ] [172.26.167.14  ] [COMM        ] TCP server listening on port 8080
+[2026-03-04 16:46:33] [INFO ] [172.26.167.14  ] [CONN        ] Updating lists (2 peers)...
+[2026-03-04 16:46:33] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread started (UDP:8081)
+[2026-03-04 16:46:33] [NET  ] [172.26.167.14  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-04 16:46:33] [NET  ] [172.26.167.14  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=1c78bb79)
+[2026-03-04 16:47:40] [INFO ] [172.26.167.14  ] [MAIN        ] Initiating shutdown...
+[2026-03-04 16:47:40] [INFO ] [172.26.167.14  ] [THREADS     ] Stop signal sent
+[2026-03-04 16:47:41] [INFO ] [172.26.167.14  ] [DISC        ] Discovery thread terminated
+[2026-03-04 16:47:43] [INFO ] [172.26.167.14  ] [SYS         ] System thread terminated
+[2026-03-04 16:47:48] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 172.23.88.139:8080 failed: Operation timed out
+[2026-03-04 16:47:48] [WARN ] [172.26.167.14  ] [COMM        ] connect() to 127.0.0.1:9090 failed: Connection refused
+[2026-03-04 16:47:48] [INFO ] [172.26.167.14  ] [CONN        ] Update complete
+[2026-03-04 16:47:48] [INFO ] [172.26.167.14  ] [CONN        ] Connectivity thread terminated
+[2026-03-04 16:47:48] [INFO ] [172.26.167.14  ] [THREADS     ] 3 threads terminated
+[2026-03-04 16:47:48] [INFO ] [172.26.167.14  ] [MAIN        ] NODE TERMINATED
+[2026-03-04 16:47:48] [INFO ] [172.26.167.14  ] [MAIN        ] ════════════════════════════

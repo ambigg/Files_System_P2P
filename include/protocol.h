@@ -10,8 +10,8 @@
 #define MAX_PEERS 64
 #define MAX_FILES 1024
 #define TTL_PERMANENT 0
-#define UPDATE_INTERVAL 120 /* segundos entre actualizaciones */
-#define CONN_TIMEOUT 5      /* timeout de conexión TCP */
+#define UPDATE_INTERVAL 10
+#define CONN_TIMEOUT 3
 
 /* Separadores del protocolo */
 #define FIELD_SEP '|'

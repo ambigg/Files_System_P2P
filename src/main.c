@@ -30,6 +30,7 @@ static void ensure_dirs(void) {
 }
 
 int main(int argc, char *argv[]) {
+  signal(SIGPIPE, SIG_IGN);
   if (argc < 2) {
     fprintf(stderr, "Usage: %s <my_ip> [port]\n", argv[0]);
     fprintf(stderr, "  Example: %s 192.168.1.10\n", argv[0]);

@@ -164,7 +164,7 @@ void discovery_announce(void) {
 }
 
 /* ==========================================================
- * DISCOVERY THREAD — always listening
+ * DISCOVERY THREAD — always listening + periodic re-announce
  * ========================================================== */
 void *thread_discovery(void *arg) {
   (void)arg;
@@ -190,12 +190,34 @@ void *thread_discovery(void *arg) {
   struct sockaddr_in sender;
   socklen_t sender_len;
 
+  time_t last_announce = 0;
+
   while (g_node.running) {
+
+    /* ── Re-announce every 10 seconds ── */
+    time_t now = time(NULL);
+    if (now - last_announce >= 10) {
+      char hello[64];
+      snprintf(hello, sizeof(hello), "%s|%s|%d\n", DISC_HELLO, g_node.my_ip,
+               g_node.my_port);
+
+      struct sockaddr_in bcast;
+      memset(&bcast, 0, sizeof(bcast));
+      bcast.sin_family = AF_INET;
+      bcast.sin_port = htons(DISCOVERY_PORT);
+      bcast.sin_addr.s_addr = INADDR_BROADCAST;
+
+      sendto(fd, hello, strlen(hello), 0, (struct sockaddr *)&bcast,
+             sizeof(bcast));
+      LOG_I("DISC", "Re-announcing to network...");
+      last_announce = now;
+    }
+
     sender_len = sizeof(sender);
     int n = recvfrom(fd, buf, sizeof(buf) - 1, 0, (struct sockaddr *)&sender,
                      &sender_len);
     if (n <= 0)
-      continue; /* timeout, check running flag */
+      continue;
     buf[n] = '\0';
 
     char type[32], ip[MAX_IP_LEN];

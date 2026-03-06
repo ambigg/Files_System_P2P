@@ -298,7 +298,6 @@ void *thread_system(void *arg) {
         if (data_stat_file(path, &entry) == P2P_OK) {
           dir_own_add(&entry);
           dir_save_own();
-          logic_announce_new_file(&entry);
           LOG_F("SYS", "New file: %s", curr[i].name);
         }
       } else if (curr[i].mtime != prev[idx].mtime) {
