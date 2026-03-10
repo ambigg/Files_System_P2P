@@ -1,26 +1,20 @@
 #ifndef THREADS_H
 #define THREADS_H
 
-/*
- * Lanza los dos hilos del nodo.
- * Llamar después de inicializar todo lo demás.
- * Retorna P2P_OK o P2P_ERR.
- */
+/* Start the 2 threads (connectivity + system). */
 int threads_start(void);
 
-/*
- * Señala a ambos hilos que deben terminar.
- * No bloquea — solo pone g_node.running = 0.
- */
+/* Signal threads to stop (sets g_node.running = 0). */
 void threads_stop(void);
 
-/*
- * Espera a que ambos hilos terminen (pthread_join).
- * Llamar después de threads_stop().
- */
+/* Wait for both threads to finish. */
 void threads_join(void);
 
-/* Funciones internas — no llamar directamente */
+/* Ask every peer in peers.conf for their list right now.
+ * Called on demand from presentation (option 1 and 5). */
+void update_all_lists(void);
+
+/* Internal thread functions */
 void *thread_connectivity(void *arg);
 void *thread_system(void *arg);
 

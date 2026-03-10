@@ -1,16 +1,15 @@
+#include "../include/presentation.h"
 #include "../include/directory.h"
 #include "../include/log.h"
 #include "../include/logic.h"
 #include "../include/protocol.h"
 #include "../include/structures.h"
+#include "../include/threads.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
-/* ==========================================================
- * ANSI colors — automatically disabled if terminal does not support them
- * ========================================================== */
 #define RESET "\033[0m"
 #define BOLD "\033[1m"
 #define GREEN "\033[32m"
@@ -19,9 +18,6 @@
 #define RED "\033[31m"
 #define GRAY "\033[90m"
 
-/* ==========================================================
- * INTERNAL HELPERS
- * ========================================================== */
 static void fmt_time(time_t t, char *buf, int len) {
   struct tm *tm = localtime(&t);
   strftime(buf, len, "%Y-%m-%d %H:%M", tm);
@@ -41,7 +37,6 @@ static void print_divider(void) {
               "────────────────────────────────\n" RESET);
 }
 
-/* Read a line from stdin without trailing newline */
 static void read_line(char *buf, int max) {
   if (fgets(buf, max, stdin))
     buf[strcspn(buf, "\n")] = '\0';
@@ -49,9 +44,6 @@ static void read_line(char *buf, int max) {
     buf[0] = '\0';
 }
 
-/* ==========================================================
- * MAIN MENU
- * ========================================================== */
 static void print_menu(void) {
   printf("\n" BOLD CYAN "╔══════════════════════════════════════╗\n"
          "║        P2P FILE SYSTEM                 ║\n");
@@ -69,14 +61,18 @@ static void print_menu(void) {
 
 /* ==========================================================
  * SHOW FULL DIRECTORY
+ * Queries all peers right now, then shows combined result.
  * ========================================================== */
 void presentation_show_directory(void) {
+  printf(YELLOW "  Querying peers...\n" RESET);
+  fflush(stdout);
+  update_all_lists();
+
   FileEntry files[MAX_FILES];
   int count = dir_general_snapshot(files, MAX_FILES);
 
   printf("\n" BOLD CYAN "═══ DISTRIBUTED DIRECTORY (%d files) ═══\n" RESET,
          count);
-
   printf(BOLD "%-30s %-6s %-10s %-17s %-15s\n" RESET, "Name", "Ext", "Size",
          "Modified", "Node");
   print_divider();
@@ -88,22 +84,19 @@ void presentation_show_directory(void) {
 
   for (int i = 0; i < count; i++) {
     FileEntry *e = &files[i];
-    char size_str[16];
-    char date_str[32];
+    char size_str[16], date_str[32];
     fmt_size(e->size, size_str);
     fmt_time(e->date_modified, date_str, sizeof(date_str));
 
-    /* Own files appear in green */
-    if (e->is_local) {
+    if (e->is_local)
       printf("%-30s %-6s %-10s %-17s " GREEN "LOCAL\n" RESET, e->name, e->ext,
              size_str, date_str);
-    } else {
+    else
       printf("%-30s %-6s %-10s %-17s %s\n", e->name, e->ext, size_str, date_str,
              e->owner_ip);
-    }
   }
 
-  LOG_I("UI", "Directory queried: %d files", count);
+  LOG_I("UI", "Directory: %d files", count);
 }
 
 /* ==========================================================
@@ -114,7 +107,7 @@ void presentation_show_file_info(const char *filename) {
   int rc = logic_get_file_info(filename, &entry);
 
   if (rc != P2P_OK) {
-    printf(RED "  File '%s' not found in the network.\n" RESET, filename);
+    printf(RED "  File '%s' not found.\n" RESET, filename);
     return;
   }
 
@@ -137,13 +130,12 @@ void presentation_show_file_info(const char *filename) {
   printf(BOLD "  Modified:  " RESET "%s\n", modified_str);
   printf(BOLD "  TTL:       " RESET "%s\n", ttl_str);
   printf(BOLD "  Node:      " RESET);
-
   if (entry.is_local)
     printf(GREEN "LOCAL\n" RESET);
   else
     printf("%s\n", entry.owner_ip);
 
-  LOG_I("UI", "Info queried: %s", filename);
+  LOG_I("UI", "Info: %s", filename);
 }
 
 /* ==========================================================
@@ -153,6 +145,7 @@ void presentation_open_file(const char *filename) {
   char local_path[MAX_PATH_LEN];
 
   printf(YELLOW "  Fetching '%s'...\n" RESET, filename);
+  fflush(stdout);
 
   int rc = logic_open_file(filename, local_path);
   if (rc != P2P_OK) {
@@ -160,7 +153,6 @@ void presentation_open_file(const char *filename) {
     return;
   }
 
-  /* Show current content */
   printf(BOLD CYAN "\n═══ CONTENT OF %s ═══\n" RESET, filename);
   print_divider();
 
@@ -172,25 +164,17 @@ void presentation_open_file(const char *filename) {
       printf("%s", line);
       lines++;
     }
-    /* Warn if file has more than 100 lines */
     if (!feof(f))
-      printf(YELLOW "\n  ... (showing first 100 lines) ...\n" RESET);
+      printf(YELLOW "\n  ... (first 100 lines) ...\n" RESET);
     fclose(f);
   }
 
   print_divider();
-
-  /* Ask if user wants to edit */
   printf("\nEdit this file? (s/n): ");
   char opt[4];
   read_line(opt, sizeof(opt));
 
   if (opt[0] == 's' || opt[0] == 'S') {
-    /*
-     * Open with system editor.
-     * If EDITOR variable is not set, use nano.
-     * User can export EDITOR=vim before running the node.
-     */
     const char *editor = getenv("EDITOR");
     if (!editor)
       editor = "nano";
@@ -202,24 +186,18 @@ void presentation_open_file(const char *filename) {
     int ret = system(cmd);
 
     if (ret == 0) {
-      /*
-       * Mark as modified.
-       * We assume that if the editor closed without error, changes were made.
-       * A future improvement would be to compare mtime before and after.
-       */
       logic_mark_modified(local_path);
       printf(GREEN "  Changes saved locally.\n" RESET);
     } else {
-      printf(YELLOW "  Editor closed with error, no changes.\n" RESET);
+      printf(YELLOW "  Editor closed with error.\n" RESET);
     }
   }
 
-  /* Close: synchronize if changes were made, remove temporary */
   printf(YELLOW "  Closing file...\n" RESET);
   logic_close_file(local_path);
   printf(GREEN "  Done.\n" RESET);
 
-  LOG_I("UI", "File opened/closed: %s", filename);
+  LOG_I("UI", "File closed: %s", filename);
 }
 
 /* ==========================================================
@@ -232,13 +210,12 @@ void presentation_show_peers(void) {
   print_divider();
 
   if (g_node.peer_count == 0) {
-    printf(YELLOW "  (No peers configured in peers.conf)\n" RESET);
+    printf(YELLOW "  (No peers in peers.conf)\n" RESET);
     return;
   }
 
   for (int i = 0; i < g_node.peer_count; i++) {
     PeerNode *p = &g_node.peers[i];
-
     char ts[32] = "Never";
     if (p->last_seen > 0)
       fmt_time(p->last_seen, ts, sizeof(ts));
@@ -294,13 +271,12 @@ void presentation_run(void) {
       break;
 
     case 5:
-      printf(YELLOW "  Update happens automatically every %d seconds.\n"
-                    "  The next cycle will update the lists.\n" RESET,
-             UPDATE_INTERVAL);
-      /* Force immediate local re‑scan */
+      printf(YELLOW "  Querying all peers...\n" RESET);
+      fflush(stdout);
+      update_all_lists();
       dir_scan_own();
       dir_save_own();
-      printf(GREEN "  Local scan completed.\n" RESET);
+      printf(GREEN "  Done.\n" RESET);
       break;
 
     default:
