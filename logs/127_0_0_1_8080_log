@@ -1,0 +1,191 @@
+[2026-03-09 22:26:08] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:26:08] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:26:08] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:26:08] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:26:08] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:26:08] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:26:08] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:26:08] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:26:08] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:26:08] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:26:10] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:26:10] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:26:10] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:26:10] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:26:10] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:26:10] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:26:10] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:26:10] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:26:10] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:26:11] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:26:11] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:26:11] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:26:11] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:26:11] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:26:11] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:26:11] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:26:11] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:26:11] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:46] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:46] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:46] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:46] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:46] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:46] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:46] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:46] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:46] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:46] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:28:47] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:47] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:47] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:47] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:47] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:47] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:47] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:47] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:47] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:48] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:48] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:48] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:48] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:48] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:48] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:48] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:48] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:48] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:48] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:50] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:50] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:50] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:50] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:50] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:50] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:50] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:54] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:54] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:54] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:54] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:54] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:54] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:54] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:54] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:54] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:54] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:28:55] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:55] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:55] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:55] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:55] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:55] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:55] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:55] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:55] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:55] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:28:56] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:28:56] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:28:56] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:28:56] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:28:56] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:28:56] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:28:56] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:28:56] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:28:56] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:28:56] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:29:26] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:29:26] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:29:26] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:29:26] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:29:26] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:29:26] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:29:26] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:29:26] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:29:26] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED  127.0.0.1:8080
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:31:16] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:31:16] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 2
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [CONN        ] Connectivity thread started
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [COMM        ] UDP server on port 8080
+[2026-03-09 22:31:16] [INFO ] [127.0.0.1      ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:31:16] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:31:16] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=52cb570a)
+[2026-03-09 22:31:17] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:31:19] [WARN ] [127.0.0.1      ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:31:19] [INFO ] [127.0.0.1      ] [CONN        ] Poll done
+[2026-03-09 22:31:21] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:31:21] [INFO ] [127.0.0.1      ] [LOGIC       ] Looking for info: 3
+[2026-03-09 22:31:21] [DIR  ] [127.0.0.1      ] [DIR         ] FIND 3 → not found
+[2026-03-09 22:31:21] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_INFO → 3
+[2026-03-09 22:31:21] [WARN ] [127.0.0.1      ] [LOGIC       ] 3 not found in the network
+[2026-03-09 22:31:22] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:31:22] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:31:29] [INFO ] [127.0.0.1      ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:31:29] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:31:29] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=2127b935)
+[2026-03-09 22:31:32] [WARN ] [127.0.0.1      ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:31:32] [INFO ] [127.0.0.1      ] [CONN        ] Poll done
+[2026-03-09 22:31:42] [INFO ] [127.0.0.1      ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:31:42] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:31:42] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=eb7330a5)
+[2026-03-09 22:31:45] [WARN ] [127.0.0.1      ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:31:45] [INFO ] [127.0.0.1      ] [CONN        ] Poll done
+[2026-03-09 22:31:55] [INFO ] [127.0.0.1      ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:31:55] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:31:55] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=66b23fcc)
+[2026-03-09 22:31:56] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:31:56] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:31:58] [WARN ] [127.0.0.1      ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:31:58] [INFO ] [127.0.0.1      ] [CONN        ] Poll done
+[2026-03-09 22:31:58] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:31:58] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:31:59] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:32:08] [INFO ] [127.0.0.1      ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:32:08] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:32:08] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=bce3033a)
+[2026-03-09 22:32:11] [WARN ] [127.0.0.1      ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:32:11] [INFO ] [127.0.0.1      ] [CONN        ] Poll done
+[2026-03-09 22:32:21] [INFO ] [127.0.0.1      ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:32:21] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:32:21] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=6e082245)
+[2026-03-09 22:32:24] [WARN ] [127.0.0.1      ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:32:24] [INFO ] [127.0.0.1      ] [CONN        ] Poll done
+[2026-03-09 22:32:34] [INFO ] [127.0.0.1      ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:32:34] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:32:34] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=cd0fee4c)
+[2026-03-09 22:32:37] [WARN ] [127.0.0.1      ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:32:37] [INFO ] [127.0.0.1      ] [CONN        ] Poll done
+[2026-03-09 22:32:40] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:32:42] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:32:42] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:32:43] [INFO ] [127.0.0.1      ] [MAIN        ] Shutting down...
+[2026-03-09 22:32:44] [INFO ] [127.0.0.1      ] [CONN        ] Connectivity thread terminated
+[2026-03-09 22:32:46] [INFO ] [127.0.0.1      ] [SYS         ] System thread terminated
+[2026-03-09 22:32:46] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads terminated

@@ -1,0 +1,57 @@
+[2026-03-09 22:25:36] [INFO ] [172.26.164.89  ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:25:36] [INFO ] [172.26.164.89  ] [MAIN        ] NODE STARTED  172.26.164.89:8080
+[2026-03-09 22:25:36] [INFO ] [172.26.164.89  ] [DIR         ] Directory initialized
+[2026-03-09 22:25:36] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:25:36] [INFO ] [172.26.164.89  ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:25:36] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:25:36] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:25:36] [INFO ] [172.26.164.89  ] [MAIN        ] Own files: 2
+[2026-03-09 22:25:36] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads started
+[2026-03-09 22:25:36] [INFO ] [172.26.164.89  ] [SYS         ] System thread started
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [MAIN        ] NODE STARTED  172.26.164.89:8080
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [DIR         ] Directory initialized
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:33:02] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:33:02] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [MAIN        ] Own files: 2
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads started
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [CONN        ] Connectivity thread started
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [SYS         ] System thread started
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [COMM        ] UDP server on port 8080
+[2026-03-09 22:33:02] [INFO ] [172.26.164.89  ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:33:02] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:33:02] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=124ac5e5)
+[2026-03-09 22:33:05] [WARN ] [172.26.164.89  ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:33:05] [INFO ] [172.26.164.89  ] [CONN        ] Poll done
+[2026-03-09 22:33:07] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:33:08] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:33:08] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:33:09] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:33:09] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:33:10] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:33:10] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:33:11] [INFO ] [172.26.164.89  ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:33:15] [INFO ] [172.26.164.89  ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:33:15] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:33:15] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=8d89d40d)
+[2026-03-09 22:33:18] [WARN ] [172.26.164.89  ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:33:18] [INFO ] [172.26.164.89  ] [CONN        ] Poll done
+[2026-03-09 22:33:28] [INFO ] [172.26.164.89  ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:33:28] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:33:28] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=0fc3e5dc)
+[2026-03-09 22:33:31] [WARN ] [172.26.164.89  ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:33:31] [INFO ] [172.26.164.89  ] [CONN        ] Poll done
+[2026-03-09 22:33:41] [INFO ] [172.26.164.89  ] [CONN        ] Polling 1 peers...
+[2026-03-09 22:33:41] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:33:41] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=8307f25c)
+[2026-03-09 22:33:42] [INFO ] [172.26.164.89  ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:33:44] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:33:44] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:33:44] [WARN ] [172.26.164.89  ] [COMM        ] no response from 172.26.164.89:8081
+[2026-03-09 22:33:44] [INFO ] [172.26.164.89  ] [CONN        ] Poll done
+[2026-03-09 22:33:45] [INFO ] [172.26.164.89  ] [MAIN        ] Shutting down...
+[2026-03-09 22:33:45] [INFO ] [172.26.164.89  ] [CONN        ] Connectivity thread terminated
+[2026-03-09 22:33:47] [INFO ] [172.26.164.89  ] [SYS         ] System thread terminated
+[2026-03-09 22:33:47] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads terminated

@@ -1,0 +1,19 @@
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [MAIN        ] Node 172.26.164.89:8080 starting
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [DIR         ] Directory initialized
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [MAIN        ] Peers loaded: 1
+[2026-03-09 22:42:01] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:42:01] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [MAIN        ] Own files: 2
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads started
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [CONN        ] Connectivity thread started (port 8080)
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [SYS         ] System thread started
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [COMM        ] UDP server on port 8080
+[2026-03-09 22:42:01] [INFO ] [172.26.164.89  ] [CONN        ] Polling 1 peer(s)...
+[2026-03-09 22:42:01] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:42:01] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=fba62d41)
+[2026-03-09 22:42:04] [WARN ] [172.26.164.89  ] [COMM        ] no reply from 172.26.164.89:8081
+[2026-03-09 22:42:06] [INFO ] [172.26.164.89  ] [CONN        ] Connectivity thread stopped
+[2026-03-09 22:42:06] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:42:06] [INFO ] [172.26.164.89  ] [SYS         ] System thread stopped
+[2026-03-09 22:42:06] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads joined

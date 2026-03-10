@@ -45,26 +45,19 @@ int main(int argc, char *argv[]) {
   strncpy(g_node.own_list_file, "config/files.txt", MAX_PATH_LEN - 1);
   g_node.running = 1;
 
-  /* Log file */
-  snprintf(g_node.log_file, MAX_PATH_LEN, "logs/%s_%d.log", g_node.my_ip,
-           g_node.my_port);
-  for (char *p = g_node.log_file + 5; *p; p++)
-    if (*p == '.')
-      *p = '_';
+  /* Log file includes port so two instances don't collide */
+  snprintf(g_node.log_file, MAX_PATH_LEN, "logs/node_%d.log", g_node.my_port);
   log_init(g_node.log_file, g_node.my_ip);
 
-  LOG_I("MAIN", "════════════════════════════");
-  LOG_I("MAIN", "NODE STARTED  %s:%d", g_node.my_ip, g_node.my_port);
+  LOG_I("MAIN", "Node %s:%d starting", g_node.my_ip, g_node.my_port);
 
   dir_init();
   pthread_mutex_init(&g_node.lease_mutex, NULL);
 
-  /* Load peers */
   g_node.peer_count =
       data_load_peers("config/peers.conf", g_node.peers, MAX_PEERS);
   LOG_I("MAIN", "Peers loaded: %d", g_node.peer_count);
 
-  /* Own files */
   dir_scan_own();
   dir_save_own();
   LOG_I("MAIN", "Own files: %d", g_node.dir.own_count);
@@ -80,7 +73,6 @@ int main(int argc, char *argv[]) {
 
   presentation_run();
 
-  LOG_I("MAIN", "Shutting down...");
   threads_stop();
   threads_join();
   log_close();
