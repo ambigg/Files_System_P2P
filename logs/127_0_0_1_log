@@ -1,0 +1,365 @@
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [MAIN        ] IP:     127.0.0.1
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [MAIN        ] Port:   8080
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-09 22:01:15] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 3 files in shared
+[2026-03-09 22:01:15] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 3
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [CONN        ] Connectivity thread started
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [COMM        ] UDP server listening on port 8080
+[2026-03-09 22:01:15] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:01:15] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:01:15] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=1923e7a4)
+[2026-03-09 22:01:18] [WARN ] [127.0.0.1      ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-09 22:01:18] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:01:20] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:01:28] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:01:28] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:01:28] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=9461f6cc)
+[2026-03-09 22:01:28] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 3 files in shared
+[2026-03-09 22:01:28] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-09 22:01:31] [WARN ] [127.0.0.1      ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-09 22:01:31] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:01:38] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 3 files in shared
+[2026-03-09 22:01:38] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-09 22:01:41] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:01:41] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:01:41] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=bf6a31fe)
+[2026-03-09 22:01:44] [INFO ] [127.0.0.1      ] [MAIN        ] Initiating shutdown...
+[2026-03-09 22:01:44] [INFO ] [127.0.0.1      ] [THREADS     ] Stop signal sent
+[2026-03-09 22:01:44] [WARN ] [127.0.0.1      ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-09 22:01:44] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:01:45] [INFO ] [127.0.0.1      ] [SYS         ] System thread terminated
+[2026-03-09 22:01:45] [INFO ] [127.0.0.1      ] [CONN        ] Connectivity thread terminated
+[2026-03-09 22:01:45] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads terminated
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [MAIN        ] IP:     127.0.0.1
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [MAIN        ] Port:   8080
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-09 22:04:28] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 3 files in shared
+[2026-03-09 22:04:28] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 3
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [CONN        ] Connectivity thread started
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [COMM        ] UDP server listening on port 8080
+[2026-03-09 22:04:28] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:04:28] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:04:28] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=4ded8635)
+[2026-03-09 22:04:31] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:04:31] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:04:32] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:54935
+[2026-03-09 22:04:32] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:04:32] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:04:32] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:04:32] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (3 files)
+[2026-03-09 22:04:32] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 3 files
+[2026-03-09 22:04:32] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 157 bytes → 337 bytes (IV=aa9e99a1)
+[2026-03-09 22:04:33] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:04:34] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 3 files in shared
+[2026-03-09 22:04:34] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-09 22:04:39] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 3 files
+[2026-03-09 22:04:41] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:04:41] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:04:41] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=c82b945d)
+[2026-03-09 22:04:44] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:04:44] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:04:44] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:53719
+[2026-03-09 22:04:44] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:04:44] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:04:44] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:04:44] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (3 files)
+[2026-03-09 22:04:44] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 3 files
+[2026-03-09 22:04:44] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 157 bytes → 337 bytes (IV=6596e0b0)
+[2026-03-09 22:04:49] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 3 files in shared
+[2026-03-09 22:04:49] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-09 22:04:54] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:04:54] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:04:54] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=f334cf8f)
+[2026-03-09 22:04:55] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 3 files
+[2026-03-09 22:04:57] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:04:57] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:04:57] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:55354
+[2026-03-09 22:04:57] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:04:57] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:04:57] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:04:57] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (3 files)
+[2026-03-09 22:04:57] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 3 files
+[2026-03-09 22:04:57] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 157 bytes → 337 bytes (IV=2f35e8b6)
+[2026-03-09 22:05:05] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 3 files
+[2026-03-09 22:05:07] [INFO ] [127.0.0.1      ] [MAIN        ] Initiating shutdown...
+[2026-03-09 22:05:07] [INFO ] [127.0.0.1      ] [THREADS     ] Stop signal sent
+[2026-03-09 22:05:07] [INFO ] [127.0.0.1      ] [CONN        ] Connectivity thread terminated
+[2026-03-09 22:05:08] [INFO ] [127.0.0.1      ] [SYS         ] System thread terminated
+[2026-03-09 22:05:08] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads terminated
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [MAIN        ] ════════════════════════════
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [MAIN        ] NODE STARTED
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [MAIN        ] IP:     127.0.0.1
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [MAIN        ] Port:   8080
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [DIR         ] Directory initialized
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-09 22:05:09] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 3 files in shared
+[2026-03-09 22:05:09] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [MAIN        ] Own files: 3
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [CONN        ] Connectivity thread started
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [SYS         ] System thread started
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads started
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [COMM        ] UDP server listening on port 8080
+[2026-03-09 22:05:09] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:05:09] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:05:09] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=77278d43)
+[2026-03-09 22:05:10] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 3 files
+[2026-03-09 22:05:12] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:05:12] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:05:14] [INFO ] [127.0.0.1      ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-09 22:05:20] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:57317
+[2026-03-09 22:05:20] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:05:20] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:05:20] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:05:20] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (3 files)
+[2026-03-09 22:05:20] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 3 files
+[2026-03-09 22:05:20] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 157 bytes → 337 bytes (IV=c6cfb1e6)
+[2026-03-09 22:05:22] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:05:22] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:05:22] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=321d2bcd)
+[2026-03-09 22:05:25] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:05:25] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:05:27] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 3 files
+[2026-03-09 22:05:28] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 3 files
+[2026-03-09 22:05:29] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:05:29] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:05:29] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:05:29] [FILE ] [127.0.0.1      ] [SYS         ] File deleted: X.txt
+[2026-03-09 22:05:29] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:05:30] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:53775
+[2026-03-09 22:05:30] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:05:30] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:05:30] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:05:30] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:05:30] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:05:30] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 119 bytes → 261 bytes (IV=99c02679)
+[2026-03-09 22:05:35] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:05:35] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:05:35] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=3d499e4e)
+[2026-03-09 22:05:38] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:05:38] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:05:40] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:50936
+[2026-03-09 22:05:40] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:05:40] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:05:40] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:05:40] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:05:40] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:05:40] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 119 bytes → 261 bytes (IV=0758e052)
+[2026-03-09 22:05:48] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:05:48] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:05:48] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=b888ad76)
+[2026-03-09 22:05:51] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:05:51] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:05:51] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:62073
+[2026-03-09 22:05:51] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:05:51] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:05:51] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:05:51] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:05:51] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:05:51] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 119 bytes → 261 bytes (IV=1ab1ddcd)
+[2026-03-09 22:06:01] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:06:01] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:06:01] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=737e4b00)
+[2026-03-09 22:06:04] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:06:04] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:06:04] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:62211
+[2026-03-09 22:06:04] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:06:04] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:04] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:04] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:06:04] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:06:04] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 119 bytes → 261 bytes (IV=831826cc)
+[2026-03-09 22:06:14] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:06:14] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:06:14] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=5ecff6d0)
+[2026-03-09 22:06:17] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:06:17] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:06:17] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:62446
+[2026-03-09 22:06:17] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:06:17] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:17] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:17] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:06:17] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:06:17] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 119 bytes → 261 bytes (IV=ae49ccac)
+[2026-03-09 22:06:27] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:06:27] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:06:27] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=19c6945a)
+[2026-03-09 22:06:29] [DIR  ] [127.0.0.1      ] [DIR         ] OWN added: NODE1.txt
+[2026-03-09 22:06:29] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-09 22:06:29] [FILE ] [127.0.0.1      ] [SYS         ] New file: NODE1.txt
+[2026-03-09 22:06:29] [DIR  ] [127.0.0.1      ] [DIR         ] OWN removed: A.txt
+[2026-03-09 22:06:29] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:06:29] [FILE ] [127.0.0.1      ] [SYS         ] File deleted: A.txt
+[2026-03-09 22:06:30] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:06:30] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:06:30] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:06:30] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:53254
+[2026-03-09 22:06:30] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:06:30] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:30] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:30] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:06:30] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:06:30] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=a570689d)
+[2026-03-09 22:06:38] [DIR  ] [127.0.0.1      ] [DIR         ] Own scan: 2 files in shared
+[2026-03-09 22:06:38] [FILE ] [127.0.0.1      ] [DATA        ] LIST_OWN saved to config/files.txt (2 files)
+[2026-03-09 22:06:40] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:06:40] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:06:40] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=9404a382)
+[2026-03-09 22:06:42] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:06:43] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:06:43] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:06:43] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:55465
+[2026-03-09 22:06:43] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:06:43] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:43] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:43] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:06:43] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:06:43] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=0e832107)
+[2026-03-09 22:06:53] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:06:53] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:06:53] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=9f311603)
+[2026-03-09 22:06:56] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:06:56] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:06:56] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:65458
+[2026-03-09 22:06:56] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:06:56] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:56] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:06:56] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:06:56] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:06:56] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=b2bcff7e)
+[2026-03-09 22:07:06] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:07:06] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:07:06] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=5a27b48e)
+[2026-03-09 22:07:09] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:07:09] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:07:09] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:50502
+[2026-03-09 22:07:09] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:07:09] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:09] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:09] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:07:09] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:07:09] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=16d9047f)
+[2026-03-09 22:07:19] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:07:19] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:07:19] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=45785f5d)
+[2026-03-09 22:07:22] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:07:22] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:07:22] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:56092
+[2026-03-09 22:07:22] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:07:22] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:22] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:22] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:07:22] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:07:22] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=7f3f4d7f)
+[2026-03-09 22:07:32] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:07:32] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:07:32] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=00b281d2)
+[2026-03-09 22:07:35] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:07:35] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:07:35] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:56258
+[2026-03-09 22:07:35] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:07:35] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:35] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:35] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:07:35] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:07:35] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=23782cf6)
+[2026-03-09 22:07:45] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:07:45] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:07:45] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=7bf090fa)
+[2026-03-09 22:07:48] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:07:48] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:07:48] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:53926
+[2026-03-09 22:07:48] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:07:48] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:48] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:48] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:07:48] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:07:48] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=75bd6bcf)
+[2026-03-09 22:07:58] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:50885
+[2026-03-09 22:07:58] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:07:58] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:58] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:07:58] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:07:58] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:07:58] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=e1791fb5)
+[2026-03-09 22:07:58] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:07:58] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:07:58] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=861d027b)
+[2026-03-09 22:08:01] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:08:01] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:08:08] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:61358
+[2026-03-09 22:08:08] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:08:08] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:08] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:08] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:08:08] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:08:08] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=aa8d3e6f)
+[2026-03-09 22:08:11] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:08:11] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:08:11] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=4113a105)
+[2026-03-09 22:08:12] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:08:14] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:08:14] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:08:18] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:63603
+[2026-03-09 22:08:18] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:08:18] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:18] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:18] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:08:18] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:08:18] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=348682b3)
+[2026-03-09 22:08:24] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:08:24] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:08:24] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=bc52b02d)
+[2026-03-09 22:08:25] [INFO ] [127.0.0.1      ] [UI          ] Directory queried: 2 files
+[2026-03-09 22:08:27] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:08:27] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:08:28] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:54267
+[2026-03-09 22:08:28] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:08:28] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:28] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:28] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:08:28] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:08:28] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=73bba3ae)
+[2026-03-09 22:08:37] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:08:37] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:08:37] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=e75aea5f)
+[2026-03-09 22:08:40] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:08:40] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:08:40] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:50312
+[2026-03-09 22:08:40] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:08:40] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:40] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:40] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:08:40] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:08:40] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=4708d8ac)
+[2026-03-09 22:08:50] [INFO ] [127.0.0.1      ] [CONN        ] Updating lists (1 peers)...
+[2026-03-09 22:08:50] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-09 22:08:50] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 31 bytes → 85 bytes (IV=6299f987)
+[2026-03-09 22:08:53] [WARN ] [127.0.0.1      ] [COMM        ] No response from 127.0.0.1:8081
+[2026-03-09 22:08:53] [INFO ] [127.0.0.1      ] [CONN        ] Update complete
+[2026-03-09 22:08:53] [NET  ] [127.0.0.1      ] [CONN        ] Datagram from 127.0.0.1:60058
+[2026-03-09 22:08:53] [NET  ] [127.0.0.1      ] [SECURITY    ] DECRYPT OK: 31 bytes
+[2026-03-09 22:08:53] [NET  ] [127.0.0.1      ] [TRANSFER    ] PARSE OK type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:53] [INFO ] [127.0.0.1      ] [LOGIC       ] Request type=GET_LIST from=127.0.0.1
+[2026-03-09 22:08:53] [NET  ] [127.0.0.1      ] [TRANSFER    ] BUILD LIST_RESP (2 files)
+[2026-03-09 22:08:53] [DIR  ] [127.0.0.1      ] [LOGIC       ] GET_LIST responded: 2 files
+[2026-03-09 22:08:53] [NET  ] [127.0.0.1      ] [SECURITY    ] ENCRYPT OK: 123 bytes → 269 bytes (IV=723a7e8c)
+[2026-03-09 22:08:54] [INFO ] [127.0.0.1      ] [MAIN        ] Initiating shutdown...
+[2026-03-09 22:08:54] [INFO ] [127.0.0.1      ] [THREADS     ] Stop signal sent
+[2026-03-09 22:08:54] [INFO ] [127.0.0.1      ] [CONN        ] Connectivity thread terminated
+[2026-03-09 22:08:54] [INFO ] [127.0.0.1      ] [SYS         ] System thread terminated
+[2026-03-09 22:08:54] [INFO ] [127.0.0.1      ] [THREADS     ] 2 threads terminated

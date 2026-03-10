@@ -587,3 +587,100 @@
 [2026-03-06 17:19:20] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads terminated
 [2026-03-06 17:19:20] [INFO ] [172.26.164.89  ] [MAIN        ] NODE TERMINATED
 [2026-03-06 17:19:20] [INFO ] [172.26.164.89  ] [MAIN        ] ════════════════════════════
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [MAIN        ] ════════════════════════════
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [MAIN        ] NODE STARTED
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [MAIN        ] IP:     172.26.164.89
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [MAIN        ] Port:   8080
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [DIR         ] Directory initialized
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-06 17:25:22] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 3 files in shared
+[2026-03-06 17:25:22] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [MAIN        ] Own files: 3
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [CONN        ] Connectivity thread started
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads started
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [COMM        ] UDP server listening on port 8080
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:25:22] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:25:22] [INFO ] [172.26.164.89  ] [SYS         ] System thread started
+[2026-03-06 17:25:22] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=bf3f9c68)
+[2026-03-06 17:25:25] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:25:25] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:25:27] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 3 files in shared
+[2026-03-06 17:25:27] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-06 17:25:27] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-06 17:25:35] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:25:35] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:25:35] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=ca6c0fe9)
+[2026-03-06 17:25:38] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:25:38] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:25:46] [INFO ] [172.26.164.89  ] [UI          ] Directory queried: 3 files
+[2026-03-06 17:25:48] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:25:48] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:25:48] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=45ab1e11)
+[2026-03-06 17:25:51] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:25:51] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:25:52] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 3 files in shared
+[2026-03-06 17:25:52] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-06 17:26:01] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:26:01] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:26:01] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=00a1bc9c)
+[2026-03-06 17:26:04] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:26:04] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:26:13] [INFO ] [172.26.164.89  ] [MAIN        ] Initiating shutdown...
+[2026-03-06 17:26:13] [INFO ] [172.26.164.89  ] [THREADS     ] Stop signal sent
+[2026-03-06 17:26:14] [INFO ] [172.26.164.89  ] [CONN        ] Connectivity thread terminated
+[2026-03-06 17:26:17] [INFO ] [172.26.164.89  ] [SYS         ] System thread terminated
+[2026-03-06 17:26:17] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads terminated
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [MAIN        ] ════════════════════════════
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [MAIN        ] NODE STARTED
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [MAIN        ] IP:     172.26.164.89
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [MAIN        ] Port:   8080
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [DIR         ] Directory initialized
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [MAIN        ] peers.conf: 1 peers loaded
+[2026-03-06 17:26:39] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 3 files in shared
+[2026-03-06 17:26:39] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [MAIN        ] Own files: 3
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads started
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [CONN        ] Connectivity thread started
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [COMM        ] UDP server listening on port 8080
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:26:39] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:26:39] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=be874638)
+[2026-03-06 17:26:39] [INFO ] [172.26.164.89  ] [SYS         ] System thread started
+[2026-03-06 17:26:42] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:26:42] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:26:44] [INFO ] [172.26.164.89  ] [DATA        ] Loaded 1 peers from config/peers.conf
+[2026-03-06 17:26:44] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 3 files in shared
+[2026-03-06 17:26:44] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-06 17:26:47] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 3 files in shared
+[2026-03-06 17:26:47] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-06 17:26:52] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:26:52] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:26:52] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=39c65560)
+[2026-03-06 17:26:55] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:26:55] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:27:05] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:27:05] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:27:05] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=f4bcf3ea)
+[2026-03-06 17:27:08] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:27:08] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:27:13] [INFO ] [172.26.164.89  ] [UI          ] Directory queried: 3 files
+[2026-03-06 17:27:14] [DIR  ] [172.26.164.89  ] [DIR         ] Own scan: 3 files in shared
+[2026-03-06 17:27:14] [FILE ] [172.26.164.89  ] [DATA        ] LIST_OWN saved to config/files.txt (3 files)
+[2026-03-06 17:27:18] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:27:18] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:27:18] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=df0d9eba)
+[2026-03-06 17:27:21] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:27:21] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:27:31] [INFO ] [172.26.164.89  ] [CONN        ] Updating lists (1 peers)...
+[2026-03-06 17:27:31] [NET  ] [172.26.164.89  ] [TRANSFER    ] BUILD GET_LIST
+[2026-03-06 17:27:31] [NET  ] [172.26.164.89  ] [SECURITY    ] ENCRYPT OK: 35 bytes → 93 bytes (IV=9a033d44)
+[2026-03-06 17:27:34] [WARN ] [172.26.164.89  ] [COMM        ] No response from 172.26.164.89:8081
+[2026-03-06 17:27:34] [INFO ] [172.26.164.89  ] [CONN        ] Update complete
+[2026-03-06 17:27:35] [INFO ] [172.26.164.89  ] [MAIN        ] Initiating shutdown...
+[2026-03-06 17:27:35] [INFO ] [172.26.164.89  ] [THREADS     ] Stop signal sent
+[2026-03-06 17:27:36] [INFO ] [172.26.164.89  ] [CONN        ] Connectivity thread terminated
+[2026-03-06 17:27:39] [INFO ] [172.26.164.89  ] [SYS         ] System thread terminated
+[2026-03-06 17:27:39] [INFO ] [172.26.164.89  ] [THREADS     ] 2 threads terminated

@@ -17,7 +17,6 @@ SRCS =  src/main.c          \
         src/logic.c         \
         src/threads.c       \
         src/presentation.c  \
-        src/discovery.c
 
 OBJS = $(SRCS:.c=.o)
 
