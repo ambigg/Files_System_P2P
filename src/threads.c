@@ -27,7 +27,8 @@ static pthread_t tid_system;
  * ========================================================== */
 void update_all_lists(void) {
   /* Re-read peers.conf in case the user added new entries */
-  data_load_peers("config/peers.conf", g_node.peers, MAX_PEERS);
+  g_node.peer_count =
+      data_load_peers("config/peers.conf", g_node.peers, MAX_PEERS);
 
   LOG_I("CONN", "Updating lists (%d peers)...", g_node.peer_count);
 
@@ -100,6 +101,10 @@ void update_all_lists(void) {
   }
 
   free(get_list_secure);
+
+  /* Persistir LISTA_GENERAL para que sobreviva reinicios */
+  dir_save_general();
+
   LOG_I("CONN", "Update complete");
 }
 

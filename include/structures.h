@@ -44,6 +44,7 @@ typedef struct {
 typedef struct {
   char original_name[MAX_FILENAME_LEN];
   char owner_ip[MAX_IP_LEN];
+  int owner_port; /* puerto real del dueño — necesario para SYNC_FILE */
   char local_path[MAX_PATH_LEN];
   time_t checkout_time;
   int has_changes;

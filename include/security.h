@@ -7,7 +7,7 @@
  * Clave compartida — todos los nodos deben tener la misma.
  * En una implementación real esto vendría de un archivo de config.
  */
-#define SEC_SHARED_KEY "p2pFS_key_2024!!"
+#define SEC_SHARED_KEY "p2pFS_key_2026"
 #define SEC_KEY_LEN 16
 
 /*

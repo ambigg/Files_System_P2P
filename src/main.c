@@ -5,6 +5,9 @@
 #include "../include/protocol.h"
 #include "../include/structures.h"
 #include "../include/threads.h"
+#include <arpa/inet.h>
+#include <ifaddrs.h>
+#include <net/if.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,19 +31,50 @@ static void ensure_dirs(void) {
   mkdir("config", 0755);
 }
 
+/**
+ * Obtiene la primera dirección IPv4 de una interfaz no loopback.
+ * Retorna 0 en éxito, -1 en error.
+ */
+static int get_my_ip(char *ip_buf, size_t len) {
+  struct ifaddrs *ifaddr, *ifa;
+  int found = 0;
+  if (getifaddrs(&ifaddr) == -1)
+    return -1;
+  for (ifa = ifaddr; ifa != NULL; ifa = ifa->ifa_next) {
+    if (ifa->ifa_addr == NULL)
+      continue;
+    if (ifa->ifa_addr->sa_family == AF_INET) {
+      if (strcmp(ifa->ifa_name, "lo") == 0 || strcmp(ifa->ifa_name, "lo0") == 0)
+        continue;
+      struct sockaddr_in *addr = (struct sockaddr_in *)ifa->ifa_addr;
+      inet_ntop(AF_INET, &addr->sin_addr, ip_buf, len);
+      found = 1;
+      break;
+    }
+  }
+  freeifaddrs(ifaddr);
+  return found ? 0 : -1;
+}
+
 int main(int argc, char *argv[]) {
   signal(SIGPIPE, SIG_IGN);
-
-  if (argc < 2) {
-    fprintf(stderr, "Usage: %s <my_ip> [port]\n", argv[0]);
-    return 1;
-  }
-
   ensure_dirs();
   memset(&g_node, 0, sizeof(g_node));
 
-  strncpy(g_node.my_ip, argv[1], MAX_IP_LEN - 1);
-  g_node.my_port = (argc >= 3) ? atoi(argv[2]) : P2P_PORT;
+  /* Determinar IP y puerto según argumentos */
+  if (argc >= 2) {
+    strncpy(g_node.my_ip, argv[1], MAX_IP_LEN - 1);
+    g_node.my_port = (argc >= 3) ? atoi(argv[2]) : P2P_PORT;
+  } else {
+    if (get_my_ip(g_node.my_ip, MAX_IP_LEN) != 0) {
+      fprintf(stderr, "Error: no se pudo detectar IP\n");
+      fprintf(stderr, "Uso: %s [ip] [puerto]\n", argv[0]);
+      return 1;
+    }
+    g_node.my_port = P2P_PORT;
+    printf("IP detectada: %s\n", g_node.my_ip);
+  }
+
   strncpy(g_node.shared_folder, "shared", MAX_PATH_LEN - 1);
   strncpy(g_node.own_list_file, "config/files.txt", MAX_PATH_LEN - 1);
   g_node.running = 1;
@@ -48,7 +82,6 @@ int main(int argc, char *argv[]) {
   /* Log file includes port so two instances don't collide */
   snprintf(g_node.log_file, MAX_PATH_LEN, "logs/node_%d.log", g_node.my_port);
   log_init(g_node.log_file, g_node.my_ip);
-
   LOG_I("MAIN", "Node %s:%d starting", g_node.my_ip, g_node.my_port);
 
   dir_init();
@@ -58,9 +91,14 @@ int main(int argc, char *argv[]) {
       data_load_peers("config/peers.conf", g_node.peers, MAX_PEERS);
   LOG_I("MAIN", "Peers loaded: %d", g_node.peer_count);
 
+  /* Cargar lista propia desde disco */
   dir_scan_own();
   dir_save_own();
   LOG_I("MAIN", "Own files: %d", g_node.dir.own_count);
+
+  /* Cargar último estado conocido de la red (sobrevive reinicios) */
+  dir_load_general();
+  LOG_I("MAIN", "General files loaded: %d", g_node.dir.general_count);
 
   signal(SIGINT, handle_signal);
   signal(SIGTERM, handle_signal);

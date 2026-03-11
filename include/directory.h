@@ -48,7 +48,7 @@ void dir_own_remove(const char *filename);
 
 /*
  * Copia LISTA_OWN a un arreglo externo (thread-safe).
- * out : buffer con capacidad para max entradas
+ * out : buffer con capacidad para max entradas.
  * Retorna número de entradas copiadas.
  */
 int dir_own_snapshot(FileEntry *out, int max);
@@ -60,7 +60,7 @@ int dir_own_snapshot(FileEntry *out, int max);
 /*
  * Actualiza LISTA_GENERAL con la lista recibida de un peer.
  * Primero borra todas las entradas de ese peer,
- * luego inserta las nuevas. Esto maneja automáticamente
+ * luego inserta las nuevas. Maneja automáticamente
  * archivos que el peer dejó de compartir.
  */
 void dir_general_update_from_peer(const char *peer_ip, const FileEntry *files,
@@ -79,11 +79,10 @@ void dir_general_remove_peer(const char *peer_ip);
 void dir_general_add(const FileEntry *entry);
 
 /*
- * Busca un archivo en LISTA_GENERAL y LISTA_OWN.
+ * Busca un archivo en LISTA_OWN y LISTA_GENERAL.
  * Llena found_out con los datos si lo encuentra.
  * Retorna P2P_OK si encontró, P2P_NOT_FOUND si no.
- *
- * NOTA: esta función toma y libera los mutexes internamente.
+ * Toma y libera los mutexes internamente.
  */
 int dir_find(const char *filename, FileEntry *found_out);
 
@@ -92,6 +91,21 @@ int dir_find(const char *filename, FileEntry *found_out);
  * Retorna número total de entradas copiadas.
  */
 int dir_general_snapshot(FileEntry *out, int max);
+
+/*
+ * Persiste LISTA_GENERAL en config/general.txt.
+ * Llamar al final de cada update_all_lists() para que
+ * el directorio de red sobreviva reinicios del nodo.
+ */
+void dir_save_general(void);
+
+/*
+ * Carga LISTA_GENERAL desde config/general.txt.
+ * Llamar al arrancar, después de dir_load_own(),
+ * para tener el último estado conocido de la red
+ * antes de que los peers respondan.
+ */
+void dir_load_general(void);
 
 /*
  * Decrementa el TTL de cada entrada de LISTA_GENERAL.

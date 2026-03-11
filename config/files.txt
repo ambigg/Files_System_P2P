@@ -2,4 +2,3 @@
 # name|ext|size|date_created|date_modified|ttl
 fox copy1.png|png|2006|1773170331|1753129891|120
 NODE1.txt|txt|0|1773115587|1772834234|120
-final.txt|txt|0|1773170995|1773170995|120

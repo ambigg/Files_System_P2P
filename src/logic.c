@@ -11,6 +11,25 @@
 #include <string.h>
 #include <time.h>
 
+/* ==========================================================
+ * HELPER — busca el puerto real de un peer por su IP.
+ * Si no lo encuentra en la lista, usa P2P_PORT como fallback.
+ * Esto es necesario porque los peers pueden correr en puertos
+ * distintos al default (ej: 9090 en lugar de 8080).
+ * ========================================================== */
+static int get_peer_port(const char *ip) {
+  for (int i = 0; i < g_node.peer_count; i++) {
+    if (strcmp(g_node.peers[i].ip, ip) == 0)
+      return g_node.peers[i].port;
+  }
+  return P2P_PORT; /* fallback */
+}
+
+/* ==========================================================
+ * HELPER — cifra, envía, recibe y descifra en un solo paso.
+ * Encapsula todo el ciclo de request/response para no
+ * repetirlo en cada operación de cliente.
+ * ========================================================== */
 static int request(const char *ip, int port, const char *msg_plain,
                    char *resp_plain) {
   char secure_out[MAX_MSG_LEN * 2];
@@ -32,11 +51,16 @@ static int request(const char *ip, int port, const char *msg_plain,
   return P2P_OK;
 }
 
+/* ==========================================================
+ * HANDLE REQUEST — despachador de mensajes entrantes.
+ * El hilo de conectividad llama esta función por cada
+ * datagrama recibido. Decide qué responder según el tipo.
+ * ========================================================== */
 int logic_handle_request(const Message *msg, const char *sender_ip,
                          char *response) {
   LOG_I("LOGIC", "Request type=%s from=%s", msg->type, sender_ip);
 
-  /* GET_LIST */
+  /* GET_LIST — devuelve LISTA_OWN completa (siempre autoritativo) */
   if (strcmp(msg->type, MSG_GET_LIST) == 0) {
     FileEntry *own = malloc(MAX_FILES * sizeof(FileEntry));
     if (!own)
@@ -48,7 +72,7 @@ int logic_handle_request(const Message *msg, const char *sender_ip,
     return P2P_OK;
   }
 
-  /* GET_INFO */
+  /* GET_INFO — 3 casos: mío / sé quién / no sé */
   if (strcmp(msg->type, MSG_GET_INFO) == 0) {
     const char *filename = msg->payload;
     FileEntry found;
@@ -66,7 +90,7 @@ int logic_handle_request(const Message *msg, const char *sender_ip,
     return P2P_OK;
   }
 
-  /* GET_FILE */
+  /* GET_FILE — lee shared/ y responde con contenido en Base64 */
   if (strcmp(msg->type, MSG_GET_FILE) == 0) {
     const char *filename = msg->payload;
     char path[MAX_PATH_LEN];
@@ -90,7 +114,7 @@ int logic_handle_request(const Message *msg, const char *sender_ip,
     return P2P_OK;
   }
 
-  /* NEW_FILE */
+  /* NEW_FILE — otro nodo anuncia un archivo nuevo */
   if (strcmp(msg->type, MSG_NEW_FILE) == 0) {
     FileEntry entry;
     if (transfer_parse_info_payload(msg->payload, &entry) == P2P_OK) {
@@ -102,7 +126,7 @@ int logic_handle_request(const Message *msg, const char *sender_ip,
     return P2P_OK;
   }
 
-  /* SYNC_FILE */
+  /* SYNC_FILE — recibimos cambios a un archivo nuestro */
   if (strcmp(msg->type, MSG_SYNC_FILE) == 0) {
     char filename[MAX_FILENAME_LEN];
     unsigned char *content = malloc(MAX_PAYLOAD_LEN);
@@ -136,6 +160,11 @@ int logic_handle_request(const Message *msg, const char *sender_ip,
   return P2P_ERR;
 }
 
+/* ==========================================================
+ * GET FILE INFO — obtiene metadatos de un archivo.
+ * Busca primero local, luego pregunta al dueño directamente,
+ * si falla recorre todos los peers.
+ * ========================================================== */
 int logic_get_file_info(const char *filename, FileEntry *entry_out) {
   LOG_I("LOGIC", "Info request: %s", filename);
 
@@ -145,12 +174,13 @@ int logic_get_file_info(const char *filename, FileEntry *entry_out) {
 
     char owner_ip[MAX_IP_LEN];
     strncpy(owner_ip, entry_out->owner_ip, MAX_IP_LEN - 1);
+    int owner_port = get_peer_port(owner_ip); /* FIX: puerto real del dueño */
 
     char get_msg[MAX_MSG_LEN];
     transfer_build_get_info(get_msg, g_node.my_ip, filename);
 
     char resp_plain[MAX_MSG_LEN];
-    if (request(owner_ip, P2P_PORT, get_msg, resp_plain) == P2P_OK) {
+    if (request(owner_ip, owner_port, get_msg, resp_plain) == P2P_OK) {
       Message resp;
       if (transfer_parse_message(resp_plain, &resp) == P2P_OK &&
           strcmp(resp.type, MSG_INFO_RESP) == 0) {
@@ -161,6 +191,7 @@ int logic_get_file_info(const char *filename, FileEntry *entry_out) {
     dir_general_remove_peer(owner_ip);
   }
 
+  /* Si el dueño no respondió, preguntamos a todos los peers */
   char get_msg[MAX_MSG_LEN];
   transfer_build_get_info(get_msg, g_node.my_ip, filename);
 
@@ -189,8 +220,10 @@ int logic_get_file_info(const char *filename, FileEntry *entry_out) {
       if (!owner)
         continue;
 
+      int redir_port =
+          get_peer_port(owner); /* FIX: puerto real del redirigido */
       char resp2_plain[MAX_MSG_LEN];
-      if (request(owner, P2P_PORT, get_msg, resp2_plain) != P2P_OK)
+      if (request(owner, redir_port, get_msg, resp2_plain) != P2P_OK)
         continue;
 
       Message resp2;
@@ -205,9 +238,17 @@ int logic_get_file_info(const char *filename, FileEntry *entry_out) {
   return P2P_NOT_FOUND;
 }
 
+/* ==========================================================
+ * OPEN FILE — abre un archivo local o remoto de forma
+ * transparente para el usuario.
+ * Si es local: devuelve la ruta en shared/.
+ * Si es remoto: descarga con GET_FILE, guarda en tmp/,
+ * registra lease y devuelve la ruta temporal.
+ * ========================================================== */
 int logic_open_file(const char *filename, char *local_path_out) {
   LOG_I("LOGIC", "Opening: %s", filename);
 
+  /* Revisar si es un archivo propio */
   FileEntry *own = malloc(MAX_FILES * sizeof(FileEntry));
   if (!own)
     return P2P_ERR;
@@ -222,15 +263,19 @@ int logic_open_file(const char *filename, char *local_path_out) {
   }
   free(own);
 
+  /* Archivo remoto — obtener info del dueño */
   FileEntry info;
   if (logic_get_file_info(filename, &info) != P2P_OK)
     return P2P_NOT_FOUND;
+
+  int owner_port =
+      get_peer_port(info.owner_ip); /* FIX: puerto real del dueño */
 
   char get_msg[MAX_MSG_LEN];
   transfer_build_get_file(get_msg, g_node.my_ip, filename);
 
   char resp_plain[MAX_MSG_LEN * 2];
-  if (request(info.owner_ip, P2P_PORT, get_msg, resp_plain) != P2P_OK)
+  if (request(info.owner_ip, owner_port, get_msg, resp_plain) != P2P_OK)
     return P2P_ERR;
 
   Message resp;
@@ -259,11 +304,13 @@ int logic_open_file(const char *filename, char *local_path_out) {
   if (rc != P2P_OK)
     return P2P_ERR;
 
+  /* Registrar lease con IP y puerto del dueño para el SYNC_FILE posterior */
   pthread_mutex_lock(&g_node.lease_mutex);
   if (g_node.lease_count < 64) {
     FileLease *lease = &g_node.leases[g_node.lease_count++];
     strncpy(lease->original_name, filename, MAX_FILENAME_LEN - 1);
     strncpy(lease->owner_ip, info.owner_ip, MAX_IP_LEN - 1);
+    lease->owner_port = owner_port; /* FIX: guardar puerto para SYNC_FILE */
     strncpy(lease->local_path, local_path_out, MAX_PATH_LEN - 1);
     lease->checkout_time = time(NULL);
     lease->has_changes = 0;
@@ -273,6 +320,10 @@ int logic_open_file(const char *filename, char *local_path_out) {
   return P2P_OK;
 }
 
+/* ==========================================================
+ * CLOSE FILE — cierra el archivo y, si hubo cambios,
+ * envía SYNC_FILE al dueño original. Siempre elimina el temporal.
+ * ========================================================== */
 int logic_close_file(const char *local_path) {
   pthread_mutex_lock(&g_node.lease_mutex);
 
@@ -304,8 +355,9 @@ int logic_close_file(const char *local_path) {
       free(content);
       if (n > 0) {
         char resp_plain[MAX_MSG_LEN];
-        request(lease.owner_ip, P2P_PORT, sync_msg, resp_plain);
-        LOG_F("LOGIC", "SYNC_FILE → %s", lease.owner_ip);
+        /* FIX: usar el puerto guardado en el lease, no P2P_PORT hardcodeado */
+        request(lease.owner_ip, lease.owner_port, sync_msg, resp_plain);
+        LOG_F("LOGIC", "SYNC_FILE → %s:%d", lease.owner_ip, lease.owner_port);
       }
     }
   }
@@ -314,6 +366,10 @@ int logic_close_file(const char *local_path) {
   return P2P_OK;
 }
 
+/* ==========================================================
+ * MARK MODIFIED — marca que el archivo temporal fue modificado.
+ * Llamado por presentación después de que el editor cierra.
+ * ========================================================== */
 void logic_mark_modified(const char *local_path) {
   pthread_mutex_lock(&g_node.lease_mutex);
   for (int i = 0; i < g_node.lease_count; i++) {
@@ -325,11 +381,19 @@ void logic_mark_modified(const char *local_path) {
   pthread_mutex_unlock(&g_node.lease_mutex);
 }
 
+/* ==========================================================
+ * HANDLE NEW FILE — agrega a LISTA_GENERAL cuando llega
+ * una notificación NEW_FILE de otro nodo.
+ * ========================================================== */
 void logic_handle_new_file(const FileEntry *entry, const char *from_ip) {
   dir_general_add(entry);
   LOG_D("DIR", "New file from %s: %s", from_ip, entry->name);
 }
 
+/* ==========================================================
+ * ANNOUNCE NEW FILE — broadcast a todos los peers cuando
+ * el hilo de sistema detecta un archivo nuevo en shared/.
+ * ========================================================== */
 void logic_announce_new_file(const FileEntry *entry) {
   char msg[MAX_MSG_LEN];
   transfer_build_new_file(msg, g_node.my_ip, entry);
